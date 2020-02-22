@@ -1,0 +1,47 @@
+.page{
+  margin: 0 auto;
+  padding-top: 50px;
+
+  h1,h2,h3{
+    text-transform: uppercase;
+    color: #00324A;
+  }
+  h1{
+    display: flex;
+    align-items: center;
+  }
+
+  &--board{
+    width: 960px;
+    h1{
+      padding-top: 2rem;
+
+      &:after {
+        background-image: url("http://localhost/wordpress-aksm/wp-content/uploads/2020/01/board.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: 1rem;
+        display: inline-block;
+        content: "";
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+  &--forms,&--report{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    //margin-bottom: -50px;
+    height: calc(100vh -  100px);
+
+    h1{
+      padding-top: 0;
+    }
+  }
+  &--contact{
+    width: 960px;
+    h1{
+      padding-top: 2rem;
+    }
+  }
+}

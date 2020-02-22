@@ -1,0 +1,134 @@
+.section{
+  &--introduction{
+    margin: 2rem 3rem 1rem 3rem;
+  }
+
+  &--support{
+    //background: rgba(0,0,0,.8);
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(http://localhost/wordpress-aksm/wp-content/uploads/2020/02/support_orez-scaled.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      margin: 0 0 2rem 6rem;
+    }
+  }
+
+  &--board-members{
+    font-family: Calibri, Arial, serif;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2rem 0;
+
+    .president,.member{
+      width: min-content;
+      border: 1px solid black;
+      border-radius: 0.5rem;
+      box-shadow: 0px 8px 10px -4px rgba(0,0,0,0.53);
+    }
+    .president{
+      grid-column-start: 1;
+      grid-column-end: 4;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      justify-items: center;
+
+      h3{
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+
+      h4{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin: 0.5rem 0;
+        color: #004465;
+      }
+
+      dl{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        padding: 1rem;
+        margin: 0;
+      }
+
+      img{
+        width: 100px;
+        grid-row-start: 3;
+        grid-row-end: 4;
+      }
+    }
+    .member{
+      margin: 1rem 1rem 1rem 0;
+      padding: 1rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h3{
+      color: black;
+      text-transform: uppercase;
+    }
+  }
+
+  &--formulare,&--vyrocni-zpravy{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+
+    ul{
+      margin: 0;
+      line-height: 1.7rem;
+    }
+  }
+
+  &--formulare,&--vyrocni-zpravy{
+    h1 {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+
+  &--kontakt{
+    h1{
+      &:after{
+        background-image: url("http://localhost/wordpress-aksm/wp-content/uploads/2020/02/message_orez.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: 1rem;
+        display: inline-block;
+        content: "";
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
+
+.forms-image,.report-image {
+  background-color: #191919;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: calc(100vh -  50px);
+}
+
+.forms-image{
+  background-image: url("http://localhost/wordpress-aksm/wp-content/uploads/2020/02/forms_orez-scaled.jpg");
+}
+
+.report-image {
+  background-image: url("http://localhost/wordpress-aksm/wp-content/uploads/2020/02/report-scaled.jpg");
+}

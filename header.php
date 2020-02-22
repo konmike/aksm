@@ -17,4 +17,18 @@
 
 	</head>
 
-<body>
+<body id="main">
+
+<a href="#main" class="smooth-scroll">
+	<span class="button button-scroll-top button-hide"></span>
+</a>
+
+<header class="header header--search-and-nav">
+	<a href="/wordpress-aksm"><img src="/wordpress-aksm/wp-content/uploads/2019/12/logo2.png" alt="AKSM" width="50px"></a>
+
+	<?php wp_nav_menu(  array( 'theme_location' => 'primary-menu',
+	                           'container' => 'nav',
+	                           'container_class' => 'nav nav--block nav--primary menu-fixed',
+	                           'container_id' => 'menu'));  ?>
+
+</header>
