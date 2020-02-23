@@ -1,8 +1,14 @@
 .list{
   color: white;
-  font-family: Calibri, Serif,"Times New Roman",Arial;
+  font-family: Calibri, serif,"Times New Roman",Arial;
   line-height: 1.5rem;
   max-width: 50%;
+  @media @mobile{
+    max-width: 75%;
+  }
+  @media @smallest{
+    max-width: 90%;
+  }
 }
 
 .list--introduction-2{

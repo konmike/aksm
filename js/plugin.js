@@ -1,6 +1,7 @@
 (function($) {
 
     $('.item-hover-59 .info').append('<span class="more-info-fake">Více</span>');
+    $('.item-hover-159 .info').append('<span class="more-info-fake">Více</span>');
     $('.item-hover-75 .info').append('<span class="prepare-fake">Připravujeme</span>');
     $('.section--introduction').append('<a href="/wordpress-aksm/o-nas" class="link link--more-info">Více</a>');
 
@@ -33,6 +34,18 @@
         }
     });
 
+
+    $('li.menu-item-158').click(function() {
+        //$('#menu-menu > li:first-child').toggleClass('hamburger-menu-button-close');
+        $('#menu-menu').toggleClass('menu--drop-down');
+        /*if(!$('#menu-menu').hasClass('hamburger-menu')){
+            $('.menu-item-56').css('display', 'flex');
+            $('.menu-item-78').css('display', 'flex');
+        }else{
+            $('.menu-item-56').css('display', 'none');
+            $('.menu-item-78').css('display', 'none');
+        }*/
+    });
 
     // $(window).scroll(function() {
     //     var top_of_projects = $("#news").offset().top;

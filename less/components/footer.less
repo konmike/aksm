@@ -7,7 +7,7 @@
   padding: 0;
   position: relative;
   bottom: 0;
-  
+
   .copyright{
     padding: 1rem 1rem;
     display: flex;
@@ -16,5 +16,10 @@
     background: black;
     width: 100%;
     color: white;
+
+    @media @smallest{
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }

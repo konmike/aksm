@@ -51,8 +51,8 @@
             </a>
             &nbsp;nebo&nbsp;
             <a href="mailto:mladez@cirkev.cz?subject=feedback" class="">
-                mladez@cirkev.cz
-            </a>.
+                mladez@cirkev.cz.
+            </a>
         </span>
 
         <a href="#graf" class="smooth-scroll link--next-article">

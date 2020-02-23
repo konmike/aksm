@@ -24,9 +24,16 @@
     align-items: center;
     margin-top: 3.125rem;
 
+    header{
+      @media @tablet{
+        padding: 0 0.5rem;
+      }
+    }
+
     h1 {
       padding-top: 1rem;
       text-transform: uppercase;
+      text-align: center;
     }
 
     h2 {
@@ -53,6 +60,11 @@
     display: inline-grid;
     grid-template-columns: 1fr 1fr;
 
+    @media @mobile{
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+
     .content{
       display: flex;
       flex-direction: column;
@@ -61,12 +73,17 @@
       background-color: rgba(0,0,0,.02);
       //line-height: 2rem;
       font-family: Calibri,Arial,serif;
+
+      @media @mobile{
+        padding: 0 2rem;
+      }
     }
 
     h1{
       color: #00324A;
       text-align: center;
       margin-bottom: 2rem;
+      margin-top: 1rem;
     }
 
     h2{
@@ -79,6 +96,11 @@
       background-repeat: no-repeat;
       background-position: bottom;
       height: 100%;
+      display: block;
+
+      @media @mobile{
+        display: none;
+      }
     }
   }
 
@@ -87,12 +109,22 @@
     display: inline-grid;
     grid-template-columns: 1fr 1fr;
 
+    @media @mobile{
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+
     .focus-image,.activity-image {
       background-color: #191919;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
       height: 100%;
+      display: block;
+
+      @media @mobile{
+        display: none;
+      }
     }
 
     .focus-image{
@@ -111,6 +143,10 @@
       background-color: rgba(0,0,0,.02);
       //line-height: 2rem;
       font-family: Calibri,Arial,serif;
+
+      @media @mobile{
+        padding: 2rem;
+      }
     }
 
     h2{
@@ -120,6 +156,21 @@
 
   &--volunteer{
     margin-top: 50px;
+    .content{
+      padding: 0 4rem;
+      @media @mobile{
+        padding: 0 2rem;
+      }
+    }
+  }
+
+  &--prepare{
+    .content{
+      padding: 0 4rem;
+      @media @mobile{
+        padding: 2rem;
+      }
+    }
   }
 
   &--volunteer, &--prepare {
@@ -127,12 +178,16 @@
     grid-template-columns: 1fr 1fr;
     height: calc(~"100vh - " 50px);
 
+    @media @mobile{
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+
     .content {
       background-color: rgba(0,0,0,.02);
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 0 4rem;
       line-height: 2rem;
       font-family: Calibri,Arial,serif;
     }
@@ -144,6 +199,11 @@
       background-repeat: no-repeat;
       background-position: center;
       height: 100%;
+      display: block;
+
+      @media @mobile{
+        display: none;
+      }
     }
     .volunteer-image{
       background-image: url("http://localhost/wordpress-aksm/wp-content/uploads/2020/01/volunteer-children.jpg");
@@ -156,6 +216,7 @@
       color: #00324A;
       text-align: center;
       margin-bottom: 2rem;
+      margin-top: 1rem;
     }
 
     h2{
@@ -170,6 +231,10 @@
       justify-content: center;
       align-items: center;
       padding-bottom: 1rem;
+
+      @media @smallest{
+        flex-direction: column;
+      }
     }
   }
 
@@ -183,6 +248,11 @@
     justify-content: center;
     align-items: center;
     transition: all 0.2s ease-in-out;
+
+    @media @smallest{
+      flex-direction: column;
+      text-align: center;
+    }
 
     &:after{
       font-family: "Font Awesome 5 Free", serif;

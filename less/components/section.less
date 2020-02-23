@@ -19,6 +19,27 @@
 
     .title {
       margin: 0 0 2rem 6rem;
+      text-transform: uppercase;
+      text-align: left;
+
+      @media @smallest{
+        text-align: center;
+        margin-left: 0;
+      }
+    }
+
+    img{
+      margin-right: 1rem;
+      margin-top: 0;
+      @media @mobile{
+        margin-top: 0.5rem;
+      }
+    }
+    img:last-child{
+      margin-right: 0;
+      @media @mobile{
+        margin-right: 1rem;
+      }
     }
   }
 
@@ -26,7 +47,16 @@
     font-family: Calibri, Arial, serif;
     display: inline-grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 2rem 0;
+    padding: 2rem;
+
+    @media @mobile{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
 
     .president,.member{
       width: min-content;
@@ -38,11 +68,22 @@
       grid-column-start: 1;
       grid-column-end: 4;
       padding: 1rem;
-      margin-bottom: 2rem;
+      margin: 0 0 2rem 0;
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
       justify-items: center;
+
+      @media @mobile{
+        margin-left: 10rem;
+        margin-right: 10rem;
+      }
+
+      @media @smallest{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
 
       h3{
         grid-column-start: 1;
@@ -75,6 +116,10 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      @media @smallest{
+        margin-right: 0;
+      }
     }
 
     h3{
@@ -83,10 +128,24 @@
     }
   }
 
+  &--projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+  }
+
   &--formulare,&--vyrocni-zpravy{
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
+
+    @media @mobile{
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+    }
 
     ul{
       margin: 0;
@@ -100,21 +159,6 @@
       grid-column-end: 3;
     }
   }
-
-  &--kontakt{
-    h1{
-      &:after{
-        background-image: url("http://localhost/wordpress-aksm/wp-content/uploads/2020/02/message_orez.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        margin-left: 1rem;
-        display: inline-block;
-        content: "";
-        width: 50px;
-        height: 50px;
-      }
-    }
-  }
 }
 
 .forms-image,.report-image {
@@ -123,6 +167,11 @@
   background-repeat: no-repeat;
   background-position: center;
   height: calc(100vh -  50px);
+  display: block;
+
+  @media @mobile{
+    display: none;
+  }
 }
 
 .forms-image{

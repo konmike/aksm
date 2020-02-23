@@ -2,14 +2,7 @@
 <main>
     <div id="content" class="page page--contact">
 <!--		--><?php //the_breadcrumb(); ?>
-		<?php if (have_posts()) : ?>
-			<?php while (have_posts()) : the_post(); ?>
-                <section class="section section--kontakt">
-                    <h1> <?php the_title();?></h1>
-                    <?php the_content(); ?>
-                </section>
-			<?php endwhile; ?>
-		<?php endif; ?>
+        <h1>Kontakt</h1>
     </div>
     <div class="contact">
         <dl>

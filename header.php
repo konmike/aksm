@@ -24,7 +24,7 @@
 </a>
 
 <header class="header header--search-and-nav">
-	<a href="/wordpress-aksm"><img src="/wordpress-aksm/wp-content/uploads/2019/12/logo2.png" alt="AKSM" width="50px"></a>
+	<a href="/wordpress-aksm" class="link link--logo"><img src="/wordpress-aksm/wp-content/uploads/2019/12/logo2.png" alt="AKSM" width="50px"></a>
 
 	<?php wp_nav_menu(  array( 'theme_location' => 'primary-menu',
 	                           'container' => 'nav',

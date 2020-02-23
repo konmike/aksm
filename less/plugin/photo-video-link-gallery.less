@@ -1,9 +1,37 @@
 .row{
   display: flex;
-  justify-content: space-between;
-  margin: 1rem 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem 1rem;
+
+  @media @tablet{
+    flex-wrap: wrap;
+  }
+  @media @mobile{
+    justify-content: center;
+  }
+  @media @smallest{
+    margin-right: 0;
+  }
+}
+.col-md-3{
+  margin-top: 0.5rem;
+
+  @media @tablet{
+    margin-top: 0.5rem;
+  }
+}
+
+.col-md-3:last-child{
+  margin-right: 0;
+
+  @media @tablet{
+    margin-right: 1rem;
+  }
 }
 .item-hover-59.circle.effect4.bottom_to_top a:hover .img,
+.item-hover-159.circle.effect4.bottom_to_top a:hover .img,
 .item-hover-75.circle.effect4.bottom_to_top a:hover .img{
   transform: none !important;
   -webkit-transform: none !important;
@@ -12,16 +40,19 @@
   -o-transform: none !important;
 }
 .item-hover-59.circle.effect4 a:hover .img,
+.item-hover-159.circle.effect4 a:hover .img,
 .item-hover-75.circle.effect4 a:hover .img{
   opacity: 1 !important;
 }
-.item-hover-59.circle.effect4.colored .info{
+.item-hover-59.circle.effect4.colored .info,
+.item-hover-159.circle.effect4.colored .info{
   background: rgba(0,0,0,.9) !important;
 }
 .item-hover-75.circle.effect4.colored .info{
   background: rgba(0,0,0,.7) !important;
 }
 .item-hover-59.circle.effect4.bottom_to_top a:hover .info,
+.item-hover-159.circle.effect4.bottom_to_top a:hover .info,
 .item-hover-75.circle.effect4.bottom_to_top a:hover .info{
   display: flex;
   flex-direction: column;
@@ -29,6 +60,7 @@
   align-items: center;
 }
 .item-hover-59.circle.effect4 .info h3,
+.item-hover-159.circle.effect4 .info h3,
 .item-hover-75.circle.effect4 .info h3{
   color: #fff;
   position: static !important;
@@ -40,11 +72,13 @@
   text-shadow: 0 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 .item-hover-75,
-.item-hover-59{
+.item-hover-59,
+.item-hover-159{
   height: 239px !important;
 }
 .item-hover-75.circle .img,
-.item-hover-59.circle .img{
+.item-hover-59.circle .img,
+.item-hover-159.circle .img{
   height: 100% !important;
 }
 .item_margin{
@@ -59,7 +93,7 @@
   padding: 0.4rem 0.8rem;
   border-radius: 0.2rem;
   margin: 1rem 0;
-  font-family: Helvetica,Arial,Tahoma;
+  font-family: Helvetica,Arial,Tahoma,serif;
 }
 //tlacitko pripravujeme
 .prepare-fake{
@@ -70,5 +104,5 @@
   padding: 0.4rem 0.8rem;
   width: 100%;
   margin: 1rem 0;
-  font-family: Helvetica,Arial,Tahoma;
+  font-family: Helvetica,Arial,Tahoma,serif;
 }
