@@ -1,13 +1,14 @@
 <?php get_header(); ?>
 <main class="home_page">
     <?php
-        $introducePost = get_post(30);
+        $introducePost = get_post(24);
         $title = $introducePost->post_title;
         $content = $introducePost->post_content;
+        $image = get_the_post_thumbnail_url(24,'full');
     ?>
-    <div class="article article--introduction">
+    <div class="article article--introduction" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(<?php echo $image ?>)">
         <header>
-            <h1>Asociace křesťanských spolků mládeže, Z.S.</h1>
+            <h1>Asociace křesťanských spolků mládeže, z. s.</h1>
             <h2>
                 Jde o dobrovolné seskupení spolků dětí a mládeže,<br />
                 které ve své činnosti zohledňují křesťanské principy a zásady.
@@ -29,10 +30,10 @@
     </div>
 
     <div id="projects" class="article article--projects">
-        <?php echo do_shortcode('[PGP id=75]') ?>
-        <?php echo do_shortcode('[PGP id=59]') ?>
+        <?php echo do_shortcode('[PGP id=88]') ?>
+        <?php echo do_shortcode('[PGP id=44]') ?>
 
-        <a href="/wordpress-aksm/akce-pro-mladez" class="link--button-all-projects">
+        <a href="/?page_id=10" class="link--button-all-projects">
             Všechny akce pro mládež
         </a>
     </div>
@@ -41,39 +42,37 @@
         <div class="divider divider--top-support"></div>
         <h3 class="title">Podporují nás</h3>
         <div class="wrapper wrapper--logo">
-            <img src="/wordpress-aksm/wp-content/uploads/2020/01/random-logo.png" alt="Logo">
-            <img src="/wordpress-aksm/wp-content/uploads/2020/01/random-logo.png" alt="Logo">
-            <img src="/wordpress-aksm/wp-content/uploads/2020/01/random-logo.png" alt="Logo">
-            <img src="/wordpress-aksm/wp-content/uploads/2020/01/random-logo.png" alt="Logo">
+            <img src="http://aksm.cz/wp-content/uploads/2020/04/cbk.png" alt="Česká biskupská konference">
+            <img src="http://aksm.cz/wp-content/uploads/2020/04/msmt.png" alt="Ministerstvo školství, mládeže a tělovýchovy">
+            <img src="http://aksm.cz/wp-content/uploads/2020/04/mv.png" alt="Ministerstvo vnitra">
+            <img src="http://aksm.cz/wp-content/uploads/2020/04/EU.png" alt="Evropská unie">
+			<img src="http://aksm.cz/wp-content/uploads/2021/01/logo.png" alt="RVD">
         </div>
+		
         <div class="divider divider--bottom-support"></div>
     </div>
 
-    <div class="contact">
-        <dl>
-            <h3>Asociace křesťanských spolků mládeže</h3>
-            <dt>Adresa</dt>
-            <dd>Thákurova 676/3</dd>
-            <dd>Praha 6-Dejvice</dd>
-            <dd>16000</dd>
-            <dd>
-                <a href="/wordpress-aksm/kontakt/#google-map" title="maps.google.com" class="prefooter__link prefooter__link--map smooth-scroll">
-                    Zde nás najdete
-                </a>
-            </dd>
+	<?php
+	$eubannerPost = get_post(202);
+	$content = $eubannerPost->post_content;
+	?>
 
-            <dt>Telefonní číslo</dt>
-            <dd>
-                <a href="tel:+420000000000" class="prefooter__link prefooter__link--tel">
-                    +420 000 000 000
-                </a>
-            </dd>
+    <div class="section section--eu-banner">
+		<?=$content?>
+    </div>
 
-            <dt>Číslo účtu</dt>
-            <dd class="prefooter__link prefooter__link--account">000000000/0300</dd>
-        </dl>
 
-		<?php echo do_shortcode('[contact-form-7 id="129" title="Kontaktní formulář"]'); ?>
+
+    <?php
+	$contactPost = get_post(106);
+	$content = $contactPost->post_content;
+	?>
+
+    <div class="section section--contact">
+        <div class="divider divider--top-contact"></div>
+
+	    <?=$content?>
+		<?php echo do_shortcode('[contact-form-7 id="7" title="Kontaktní formulář"]'); ?>
     </div>
 
 

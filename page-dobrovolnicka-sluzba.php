@@ -1,14 +1,20 @@
 <?php get_header(); ?>
 
 	<?php
-	$volunteerPost = get_post(93);
+	$volunteerPost = get_post(26);
 	$title = $volunteerPost->post_title;
 	$content = $volunteerPost->post_content;
+	$image = get_the_post_thumbnail_url(26,'full');
 	?>
 <main>
 <div class="article article--volunteer">
-	<div class="content">
-<!--		--><?php //the_breadcrumb(); ?>
+	<?php
+	if ( ! empty($image) ){
+		echo '<div class="content">';
+	}
+	else
+		echo '<div class="content" style="grid-column: 1/3; padding: 0 15rem">';
+	?>
         <h1>Dobrovolnická služba AKSM</h1>
 
         <h2><?=$title?></h2>
@@ -16,41 +22,45 @@
 
 
         <a href="#prepare" class="smooth-scroll link--next-article">
-            Nechceš i Ty věnovat rok svého života práci pro druhé?
+            Nechceš i Ty věnovat část svého života práci pro druhé?
         </a>
 
 	</div>
 
-<!--	<div class="divider divider--vertical-center"></div>-->
+	<?php
+	if ( ! empty($image) ){
+		echo '<div class="illustration-image" style="background-image: url(' . $image . ')"></div>';
+	}
+	?>
 
-	<div class="volunteer-image"></div>
-
-<!--	<a href="#projects" class="smooth-scroll link--double-down">-->
-<!--		<i class="fas fa-angle-double-down"></i>-->
-<!--	</a>-->
 </div>
 
 	<?php
-	$preparePost = get_post(131);
+	$preparePost = get_post(28);
 	$title = $preparePost->post_title;
 	$content = $preparePost->post_content;
+	$image = get_the_post_thumbnail_url(28,'full');
 	?>
 
 <div id="prepare" class="article article--prepare">
-    <div class="prepare-image"></div>
+	<?php
+	if ( ! empty($image) ){
+		echo '<div class="illustration-image" style="background-image: url(' . $image . ')"></div>';
+	    echo '<div class="content">';
+	}
+	else
+		echo '<div class="content" style="grid-column: 1/3; padding: 0 15rem">';
+	?>
 
-<!--    <div class="divider divider--vertical-center"></div>-->
-    
-    <div class="content">
         <h2><?=$title?></h2>
         <?=$content?>
 
         <span class="mail_to_us">Napiš nám na&nbsp;
-            <a href="mailto:aksm@signaly.cz?subject=feedback" class="">
-                aksm@signaly.cz
+            <a href="mailto:kancelar@aksm.cz?subject=Dobrovolnictvi" class="">
+                kancelar@aksm.cz
             </a>
             &nbsp;nebo&nbsp;
-            <a href="mailto:mladez@cirkev.cz?subject=feedback" class="">
+            <a href="mailto:mladez@cirkev.cz?subject=Dobrovolnictvi" class="">
                 mladez@cirkev.cz.
             </a>
         </span>

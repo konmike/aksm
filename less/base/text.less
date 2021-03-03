@@ -8,9 +8,7 @@ h1,h2,h3{
   color: #ffffff;
   font-family: Helvetica, Calibri, Arial, serif;
 }
-.contact h3{
-  color: #00324A;
-}
+
 a{
   text-decoration: none;
 }
@@ -152,3 +150,24 @@ a > .fas:hover{
 //.header > img{
 //  height: 50px;
 //}
+a[target^="_blank"]:after,
+a[href^="tel:"]:after,
+a[href^="mailto:"]:after{
+  font-family: "Font Awesome 5 Free", serif;
+  font-weight: 900;
+  font-style: normal;
+  padding-left: 0.5rem;
+}
+a[target^="_blank"]:after{
+  content: "\f35d";
+}
+a[href^="mailto:"]:after{
+  content: "\f0e0";
+}
+a[href^="tel:"]:after{
+  content: "\f095";
+}
+
+.grecaptcha-badge{
+  display: none !important;
+}

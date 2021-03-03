@@ -1,12 +1,19 @@
 <?php get_header(); ?>
     <?php
-        $creationPost = get_post(144);
+        $creationPost = get_post(30);
         $title = $creationPost->post_title;
         $content = $creationPost->post_content;
+        $image = get_the_post_thumbnail_url(30,'full');
     ?>
 <main>
     <div class="article article--creation">
-        <div class="content">
+	    <?php
+	    if ( ! empty($image) ){
+		    echo '<div class="content">';
+	    }
+	    else
+		    echo '<div class="content" style="grid-column: 1/3; padding: 0 15rem">';
+	    ?>
             <h1>O nás</h1>
             <h2>Vznik</h2>
             <?=$content?>
@@ -15,19 +22,30 @@
                 Jaké je naše zaměření?
             </a>
         </div>
-        <div class="creation-image"></div>
+
+        <?php
+            if ( ! empty($image) ){
+                echo '<div class="illustration-image" style="background-image: url(' . $image . ')"></div>';
+            }
+        ?>
     </div>
 
 	<?php
-        $focusPost = get_post(148);
+        $focusPost = get_post(34);
         $title = $focusPost->post_title;
         $content = $focusPost->post_content;
+	    $image = get_the_post_thumbnail_url(34,'full');
 	?>
 
     <div id="focus" class="article article--focus">
-        <div class="focus-image"></div>
-        <div class="content">
-
+        <?php
+            if ( ! empty($image) ){
+	            echo '<div class="illustration-image" style="background-image: url(' . $image . ')"></div>';
+                echo '<div class="content">';
+            }
+            else
+	            echo '<div class="content" style="grid-column: 1/3; padding: 0 15rem">';
+        ?>
             <h2>Zaměření</h2>
 	        <?=$content?>
 
@@ -38,46 +56,29 @@
     </div>
 
 	<?php
-        $activityPost = get_post(146);
+        $activityPost = get_post(32);
         $title = $activityPost->post_title;
         $content = $activityPost->post_content;
+	    $image = get_the_post_thumbnail_url(32,'full');
 	?>
 
     <div id="activity" class="article article--activity" >
-        <div class="content">
+	    <?php
+	    if ( ! empty($image) )
+		    echo '<div class="content">';
+	    else
+		    echo '<div class="content" style="grid-column: 1/3; padding: 0 15rem">';
+	    ?>
+
             <h2>Činnost</h2>
 	        <?=$content?>
-
-<!--            <p>Charakter činnosti jednotlivých členů asociace se různí, je však zaměřen většinou na-->
-<!--            neorganizovanou mládež, se snahou o účelné a společensky žádoucí využití volného času,-->
-<!--            na výchovu a formaci dobrovolných spolupracovníků - animátorů a na vysílání dobrovolníků,-->
-<!--            ochotných věnovat rok svého života dobrovolnické službě v oblasti volného času dětí a mládeže.</p>-->
-<!---->
-<!--            <p>AKSM je od roku 2004 držitelkou akreditace Ministerstva vnitra ČR vysílající organizace-->
-<!--            v oblasti dobrovolnické služby.-->
-<!--            AKSM získala také akreditaci MŠMT na školení hlavních vedoucích dětských letních táborů.</p>-->
-<!---->
-<!--            <p>AKSM ve spolupráci se Sekcí pro mládež České biskupské konference pořádá několik-->
-<!--            studijních týdnů pro mladé pracovníky s dětmi a mládeží, tzv. Studijně-formační kurs,-->
-<!--            kde probíhají různé přednášky a semináře na témata týkající se výchovy dětí a mládeže.-->
-<!--            Projekt je zaměřen na formaci mladých tak, aby nebyli pouze dobrými organizátory či-->
-<!--            vedoucími, ale především skutečnými osobnostmi.</p>-->
         </div>
-        <div class="activity-image"></div>
+	    <?php
+
+	    if ( ! empty($image) )
+		    echo '<div class="illustration-image" style="background-image: url(' . $image . ')"></div>';
+	    ?>
     </div>
-
-<!--        <a href="#prepare" class="smooth-scroll link--prepare">-->
-<!--            Nechceš i Ty věnovat rok svého života práci pro druhé?-->
-<!--        </a>-->
-
-
-<!--	<div class="divider divider--vertical-center"></div>-->
-
-<!--	<div class="volunteer-image"></div>-->
-
-<!--	<a href="#projects" class="smooth-scroll link--double-down">-->
-<!--		<i class="fas fa-angle-double-down"></i>-->
-<!--	</a>-->
 
 </main>
 

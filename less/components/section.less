@@ -7,7 +7,7 @@
     //background: rgba(0,0,0,.8);
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(http://localhost/wordpress-aksm/wp-content/uploads/2020/02/support_orez-scaled.jpg);
+    url(http://aksm.cz/wp-content/uploads/2020/04/support_orez-scaled.jpg);
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
@@ -46,7 +46,7 @@
   &--board-members{
     font-family: Calibri, Arial, serif;
     display: inline-grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     padding: 2rem;
 
     @media @mobile{
@@ -59,14 +59,15 @@
     }
 
     .president,.member{
-      width: min-content;
+      width: max-content;
+      min-width: 22rem;
       border: 1px solid black;
       border-radius: 0.5rem;
-      box-shadow: 0px 8px 10px -4px rgba(0,0,0,0.53);
+      box-shadow: 0 8px 10px -4px rgba(0,0,0,0.53);
     }
     .president{
       grid-column-start: 1;
-      grid-column-end: 4;
+      grid-column-end: 3;
       padding: 1rem;
       margin: 0 0 2rem 0;
       display: grid;
@@ -74,15 +75,16 @@
       align-items: center;
       justify-items: center;
 
+
       @media @mobile{
-        margin-left: 10rem;
-        margin-right: 10rem;
+
       }
 
       @media @smallest{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        min-width: 90%;
       }
 
       h3{
@@ -115,16 +117,31 @@
       padding: 1rem 2rem;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
 
       @media @smallest{
         margin-right: 0;
+        min-width: 80%;
+      }
+    }
+    dl{
+      color: #00324A;
+
+      & a{
+        color: #004465;
+        font-style: italic;
+
+        &:hover{
+          color: #ff7b00;
+        }
       }
     }
 
     h3{
       color: black;
       text-transform: uppercase;
+      text-align: center;
+      width: 100%;
     }
   }
 
@@ -133,13 +150,26 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    font-family: Calibri, Arial, serif;
     padding: 0;
+
+    & ul{
+      line-height: 1.7rem;
+      & a{
+        color: #00324A;
+        &:hover{
+          color: #ff7b00;
+        }
+      }
+    }
   }
 
-  &--formulare,&--vyrocni-zpravy{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
+  &--forms,&--reports{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 3rem;
 
     @media @mobile{
       display: flex;
@@ -147,37 +177,123 @@
       padding: 2rem;
     }
 
-    ul{
-      margin: 0;
-      line-height: 1.7rem;
-    }
-  }
-
-  &--formulare,&--vyrocni-zpravy{
     h1 {
       grid-column-start: 1;
       grid-column-end: 3;
     }
+
+    ul{
+      margin: 0;
+      line-height: 1.7rem;
+      & a{
+        color: #00324A;
+        &:hover{
+          color: #ff7b00;
+        }
+      }
+    }
+    .controls{
+      padding-bottom: 2rem;
+      text-transform: uppercase;
+      font-family: Calibri, Arial, serif;
+      font-weight: 900;
+      a{
+        margin: 0 0.5rem;
+        color: #00324A;
+        &:hover{
+          color: #ff7b00;
+        }
+      }
+    }
   }
-}
 
-.forms-image,.report-image {
-  background-color: #191919;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: calc(100vh -  50px);
-  display: block;
+  &--general{
+    font-family: Calibri, Arial, serif;
+    padding: 2rem 10rem 1rem 10rem;
+    line-height: 1.7rem;
 
-  @media @mobile{
-    display: none;
+    & a{
+      color: #00324A;
+      &:hover{
+        color: #ff7b00;
+      }
+    }
+
+    & ul{
+      padding-left: 2rem;
+      list-style-type: disc;
+    }
+
+    @media @mobile{
+      padding: 2rem;
+    }
   }
-}
 
-.forms-image{
-  background-image: url("http://localhost/wordpress-aksm/wp-content/uploads/2020/02/forms_orez-scaled.jpg");
-}
+  &--eu-banner{
+    font-family: Calibri,Arial,serif;
+    padding: 2rem 0;
+    width: 960px;
+    margin: 0 auto;
+    line-height: 1.7rem;
 
-.report-image {
-  background-image: url("http://localhost/wordpress-aksm/wp-content/uploads/2020/02/report-scaled.jpg");
+    @media @tablet{
+      width: 100%;
+      padding: 2rem;
+      margin: 0;
+      box-sizing: border-box;
+    }
+  }
+
+  &--contact{
+    color: #00324A;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: row;
+    padding: 4rem 0 1rem 0;
+    background: rgba(0,0,0,0.04);
+    position: relative;
+
+    @media @mobile{
+      flex-direction: column;
+      align-items: center;
+    }
+
+    dl{
+      font-family: Calibri, Tahoma, Arial, Serif, serif;
+      padding: 1.5rem 0;
+      margin-top: 0;
+
+      @media @smallest{
+        padding: 1.5rem;
+      }
+
+      & a{
+        font-style: italic;
+        color: #00324A;
+
+        &:hover{
+          color: #ff7b00;
+        }
+      }
+
+      h3{
+        margin-bottom: 1rem;
+        text-align: center;
+        color: #00324A;
+      }
+      dt{
+        font-weight: bold;
+        padding-top: 0.5rem;
+
+        &:first-child{
+          padding-top: 0;
+        }
+      }
+      dd{
+        line-height: 1.5rem;
+      }
+    }
+  }
 }

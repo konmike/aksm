@@ -29,7 +29,7 @@
       }
 
       &:after {
-        background-image: url("http://localhost/wordpress-aksm/wp-content/uploads/2020/01/board.png");
+        background-image: url("http://aksm.cz/wp-content/uploads/2020/04/board.png");
         background-size: contain;
         background-repeat: no-repeat;
         margin-left: 1rem;
@@ -56,13 +56,14 @@
     //margin-bottom: -50px;
     height: calc(100vh -  100px);
 
+
     @media @smallest{
       display: block;
       height: auto;
     }
 
     h1{
-      padding-top: 0;
+      padding-top: 2rem;
       padding-bottom: 0;
 
       @media @mobile{
@@ -86,7 +87,7 @@
       padding-top: 2rem;
 
       &:after{
-        background-image: url("http://localhost/wordpress-aksm/wp-content/uploads/2020/02/message_orez.png");
+        background-image: url("http://aksm.cz/wp-content/uploads/2020/04/message_orez.png");
         background-size: contain;
         background-repeat: no-repeat;
         margin-left: 1rem;
@@ -96,5 +97,22 @@
         height: 50px;
       }
     }
+  }
+
+  .illustrate-image {
+    background-color: #191919;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: calc(100vh -  50px);
+    display: block;
+
+    @media @mobile{
+      display: none;
+    }
+  }
+
+  &--general{
+    width: 960px;
   }
 }

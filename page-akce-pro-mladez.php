@@ -5,9 +5,17 @@
         <h1>Akce pro mládež</h1>
 
         <section class="section section--projects">
-            <?php echo do_shortcode('[PGP id=75]') ?>
-            <?php echo do_shortcode('[PGP id=159]') ?>
+            <?php echo do_shortcode('[PGP id=88]') ?>
+            <?php echo do_shortcode('[PGP id=44]') ?>
+
+	        <?php if (have_posts()) : ?>
+		        <?php while (have_posts()) : the_post(); ?>
+                        <?php the_content(); ?>
+		        <?php endwhile; ?>
+	        <?php endif; ?>
+
         </section>
+
 
     </div>
 </main>

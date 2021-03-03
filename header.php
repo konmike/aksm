@@ -14,6 +14,15 @@
 		<?php 
 			wp_head();
 		?>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163996071-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-163996071-1');
+</script>
 
 	</head>
 
@@ -24,7 +33,7 @@
 </a>
 
 <header class="header header--search-and-nav">
-	<a href="/wordpress-aksm" class="link link--logo"><img src="/wordpress-aksm/wp-content/uploads/2019/12/logo2.png" alt="AKSM" width="50px"></a>
+	<a href="/" class="link link--logo"><img src="/wp-content/uploads/2020/04/logo2.png" alt="AKSM" width="50"></a>
 
 	<?php wp_nav_menu(  array( 'theme_location' => 'primary-menu',
 	                           'container' => 'nav',

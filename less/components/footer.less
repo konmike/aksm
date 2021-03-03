@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: Calibri, Arial, serif;
   width: 100%;
   padding: 0;
   position: relative;
@@ -16,6 +17,17 @@
     background: black;
     width: 100%;
     color: white;
+
+    .link{
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+
+      &:hover{
+        color: white;
+        text-decoration: underline;
+      }
+    }
 
     @media @smallest{
       flex-direction: column;

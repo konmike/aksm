@@ -4,11 +4,24 @@
 <!--		--><?php //the_breadcrumb(); ?>
 		<?php if (have_posts()) : ?>
 			<?php while (have_posts()) : the_post(); ?>
-                <section class="section section--vyrocni-zpravy">
-                    <h1> <?php the_title();?></h1>
-                    <?php the_content(); ?>
-                </section>
-                <div class="report-image"></div>
+
+                <?php if (has_post_thumbnail()){
+					echo '<section class="section section--reports section--splitter"><h1>';
+					the_title();
+                    echo '</h1>';
+                    the_content();
+					echo '</section>';
+                    echo '<div class="illustrate-image" style="background-image: url('. get_the_post_thumbnail_url('','full') .')"></div>';
+                }
+                else{
+	                echo '<section class="section section--reports section--splitter" style="grid-column: 1/3"><h1>';
+	                the_title();
+	                echo '</h1>';
+	                the_content();
+	                echo '</section>';
+                }
+                ?>
+
 			<?php endwhile; ?>
 		<?php endif; ?>
     </div>

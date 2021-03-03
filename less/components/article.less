@@ -9,11 +9,24 @@
   //align-items: stretch;
   //align-content: stretch;
 
+  .illustration-image{
+    background-color: #191919;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 100%;
+    display: block;
+
+    @media @mobile{
+      display: none;
+    }
+  }
+
   &--introduction {
     //height: calc(~"100vh - " 50px);
     height: auto;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(http://localhost/wordpress-aksm/wp-content/uploads/2019/12/csm-2017zapad.jpg);
+    url("http://aksm.cz/wp-content/uploads/2020/04/csm-2017zapad.jpg");
     background-color: #191919;
     background-size: cover;
     background-repeat: no-repeat;
@@ -77,6 +90,18 @@
       @media @mobile{
         padding: 0 2rem;
       }
+
+      ul{
+        margin: 0;
+        line-height: 1.2rem;
+        & a{
+          color: #00324A;
+
+          &:hover{
+            color: #ff7b00;
+          }
+        }
+      }
     }
 
     h1{
@@ -89,19 +114,6 @@
     h2{
       color: rgba(0,0,0,.8);
     }
-    .creation-image {
-      background-image: url("http://localhost/wordpress-aksm/wp-content/uploads/2020/02/creation_mensi.jpg");
-      background-color: #191919;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: bottom;
-      height: 100%;
-      display: block;
-
-      @media @mobile{
-        display: none;
-      }
-    }
   }
 
   &--focus,&--activity {
@@ -113,27 +125,6 @@
       grid-template-columns: 1fr;
       height: auto;
     }
-
-    .focus-image,.activity-image {
-      background-color: #191919;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      height: 100%;
-      display: block;
-
-      @media @mobile{
-        display: none;
-      }
-    }
-
-    .focus-image{
-      background-image: url("http://localhost/wordpress-aksm/wp-content/uploads/2020/02/focus_mensi.jpg");
-    }
-
-    .activity-image {
-      background-image: url("http://localhost/wordpress-aksm/wp-content/uploads/2020/02/activity_mensi.jpg");
-     }
 
     .content{
       display: flex;
@@ -154,29 +145,10 @@
     }
   }
 
-  &--volunteer{
-    margin-top: 50px;
-    .content{
-      padding: 0 4rem;
-      @media @mobile{
-        padding: 0 2rem;
-      }
-    }
-  }
-
-  &--prepare{
-    .content{
-      padding: 0 4rem;
-      @media @mobile{
-        padding: 2rem;
-      }
-    }
-  }
-
   &--volunteer, &--prepare {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: calc(~"100vh - " 50px);
+    //height: calc(~"100vh - " 50px);
 
     @media @mobile{
       grid-template-columns: 1fr;
@@ -190,33 +162,18 @@
       justify-content: center;
       line-height: 2rem;
       font-family: Calibri,Arial,serif;
-    }
-
-    .prepare-image,
-    .volunteer-image {
-      background-color: #191919;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      height: 100%;
-      display: block;
+      padding: 2rem 4rem;
 
       @media @mobile{
-        display: none;
+        padding: 2rem;
       }
-    }
-    .volunteer-image{
-      background-image: url("http://localhost/wordpress-aksm/wp-content/uploads/2020/01/volunteer-children.jpg");
-    }
-    .prepare-image {
-      background-image: url("http://localhost/wordpress-aksm/wp-content/uploads/2020/01/volunteer-preparation.jpg");
     }
 
     h1{
       color: #00324A;
       text-align: center;
       margin-bottom: 2rem;
-      margin-top: 1rem;
+      margin-top: 4rem;
     }
 
     h2{
@@ -226,15 +183,31 @@
       color: rgba(0, 0, 0, .9);
       font-weight: bold;
       font-family: Helvetica, Calibri, Arial, serif;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
+      //display: flex;
+      //flex-direction: row;
+      //justify-content: center;
+      //align-items: center;
       padding-bottom: 1rem;
+
+      a{
+        color: #004465;
+        font-style: italic;
+
+        &:hover{
+          color: #ff7b00;
+        }
+        &:after{
+          content: "";
+          padding: 0;
+        }
+      }
 
       @media @smallest{
         flex-direction: column;
       }
+    }
+    p{
+      margin-bottom: 0;
     }
   }
 
@@ -247,6 +220,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding-top: 1rem;
     transition: all 0.2s ease-in-out;
 
     @media @smallest{
