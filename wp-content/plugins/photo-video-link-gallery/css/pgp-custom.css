@@ -1,0 +1,115 @@
+.pgp-head .pricing-table{
+	margin-top: 10px; display:block; width:100%; overflow:hidden; background:white; box-shadow: 0 0 5px hsla(0, 0%, 20%, 0.3);padding-bottom:70px
+}
+.pgp-head .plan-name{
+	margin-top:20px;text-align: center;
+}
+
+.pgp-head .plan-name h2{
+	font-weight: bold;font-size: 36px;padding-top: 30px;padding-bottom: 10px;color:#D9534F;
+}
+
+.pgp-head .plan-name h6{
+	font-size: 21px;padding-top: 10px;padding-bottom: 10px;margin-left:11px;
+}
+
+.pgp-head .purchase_btn_div{
+	margin-top:20px; margin-left:30px;
+}
+
+.pgp-head .purchase_btn_div h2{
+	font-weight: bold;font-size: 24px;padding-top: 30px;
+}
+.pgp-head .purchase_btn_div a{
+	margin-right:10px;margin-left:40px;margin-top: 30px;
+}
+
+.pgp-head .purchase_btn_div .installation{
+    margin-left:10%; padding-top:20px;
+}
+.pgp-head .purchase_btn_div .installation h2{
+    font-weight: bold;font-size: 18px;padding-top: 30px;
+}
+
+.pgp-head .rate-us{
+	margin-top:40px; margin-left:30px;
+}
+
+.pgp-head .rate-us h2{
+	font-weight: bold;font-size: 34px;padding-top: 30px;
+}
+
+.pgp-head .rate-us h6{
+	font-size: 22px;padding-top: 10px;padding-bottom: 10px;line-height:40px
+}
+
+.pgp-head .acl-rate-us span.dashicons {
+    width: 30px;
+    height: 30px;
+}
+
+.pgp-head .acl-rate-us span.dashicons-star-filled:before {
+    content: "\f155";
+    font-size: 30px;
+}
+
+.pgp-head .acl-rate-us {
+    color: #FBD229 !important;
+    padding: 10px !important;
+}
+
+.pgp-head .acl-rate-us span {
+    display: inline-block;
+}
+.pgp-head .rate-us .rate-star{
+	background:#EF4238;display:inline-block;
+	padding: 5px;
+}
+
+.pgp-head .rate-us .rate-star .acl-rate-us{
+	text-align:center; text-decoration: none;font:normal 30px; 
+}
+
+.pgp-head .share-us{
+  margin-top:30px;margin-left:30px;
+}
+
+.pgp-head .share-us h2{
+   font-weight: bold;font-size: 28px;padding-top: 30px;
+}
+.pgp-head .share-us h6{
+  font-size: 18px;padding-top: 10px;padding-bottom: 10px;line-height:50px;
+}
+
+.pgp-head .language-cont{
+	margin-top:30px;margin-left:30px;
+}
+
+.pgp-head .language-cont h2{
+	font-weight: bold;font-size: 28px;padding-top:10px; 
+}
+
+.pgp-head .language-cont h6{
+	 font-size: 18px;padding-top: 20px;padding-bottom: 10px;line-height:30px;margin-left:30px;
+}
+
+.pgp-head .shortcode-all{
+	margin-top:30px;margin-left:30px;
+}
+
+.pgp-head .shortcode-all h2{
+	 font-weight: bold;font-size: 28px;padding-top:10px;
+}
+
+.pgp-head .shortcode-all h6{
+	 font-size: 18px;padding-top: 20px;padding-bottom: 10px;line-height:30px;margin-left:30px;
+}
+.reviws{
+	text-align:left;color:#F8504B !important;
+}
+.upgrade-to-pro-demo.rateus{
+    text-align:left;margin-bottom:10px;margin-top:10px;color:#F8504B !important;
+}
+.upgrade-to-pro-demo.fag-rate-us{
+	text-decoration: none; height: 40px; width: 40px;
+}
