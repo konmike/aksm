@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 .nav {
   //max-width: 100%;
   //width: 100%;
@@ -6,7 +8,7 @@
   //line-height: 3.2rem;
 }
 
-.nav--primary .menu{
+.nav--primary .menu {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -18,31 +20,30 @@
   padding: 0 1rem;
   max-width: 100%;
 
-  @media @tablet, @mobile{
+  @include mq(tablet) {
     padding: 0;
   }
 }
-.nav--hamburger .menu{
+.nav--hamburger .menu {
   padding: 0;
 }
 
-.nav--primary .menu-item{
+.nav--primary .menu-item {
   margin: 0 0.5rem;
   display: block;
 
-  @media @tablet, @mobile{
+  @include mq(tablet) {
     display: none;
   }
 }
-.nav--hamburger .menu-item{
+.nav--hamburger .menu-item {
   display: none;
 }
 
-
 /* Mobile button - MENU */
-.nav--primary .menu .menu-item:first-child{
+.nav--primary .menu .menu-item:first-child {
   display: none;
-  @media @tablet, @mobile{
+  @include mq(tablet) {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -55,7 +56,7 @@
     //background-color: #191919;
     cursor: pointer;
 
-    &::before{
+    &::before {
       font-family: "Font Awesome 5 Free", serif;
       font-weight: 900;
       color: #004465;
@@ -65,7 +66,7 @@
     }
   }
 }
-.nav--hamburger .menu .menu-item:first-child{
+.nav--hamburger .menu .menu-item:first-child {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -78,7 +79,7 @@
   //background-color: #191919;
   cursor: pointer;
 
-  &::before{
+  &::before {
     font-family: "Font Awesome 5 Free", serif;
     font-weight: 900;
     color: #004465;
@@ -88,8 +89,8 @@
   }
 }
 /* Close mobile menu button */
-.nav--primary .menu--drop-down .menu-item:first-child{
-  &::before{
+.nav--primary .menu--drop-down .menu-item:first-child {
+  &::before {
     font-family: "Font Awesome 5 Free", serif;
     font-weight: 900;
     color: #004465;
@@ -99,49 +100,48 @@
   }
 }
 
-.menu-item:first-child a{
+.menu-item:first-child a {
   border-left: 0;
   padding: 0;
   padding-right: 0.5rem;
   width: min-content;
   width: -moz-min-content;
 
-  &:hover{
+  &:hover {
     border: 0;
   }
 }
 
-.nav--primary a{
+.nav--primary a {
   color: #004465;
   transition: all 0.2s linear;
   position: relative;
   line-height: 3.2rem;
   display: inline-block;
 
-  @media @tablet{
+  @include mq(tablet) {
     width: 100%;
     border-left: 0.3rem solid transparent;
     padding: 0 0.5rem;
   }
 
-  &:hover{
+  &:hover {
     color: #ff7b00;
 
-    @media @tablet{
+    @include mq(tablet) {
       border-left: 0.3rem solid #ff7b00;
     }
 
-    &:before{
+    &:before {
       height: 5px;
 
-      @media @tablet{
+      @include mq(tablet) {
         height: 0;
       }
     }
-
   }
-  &:before{
-    content: '';
+  &:before {
+    content: "";
     display: block;
     width: 100%;
     height: 0;
@@ -155,10 +155,10 @@
   }
 }
 .nav--primary .current-menu-ancestor > a,
-.nav--primary .current-menu-item > a{
+.nav--primary .current-menu-item > a {
   color: #ff7b00;
-  &:before{
-    content: '';
+  &:before {
+    content: "";
     display: block;
     width: 100%;
     height: 5px;
@@ -169,16 +169,15 @@
   }
 }
 
-.menu--drop-down .current-menu-item > a{
+.menu--drop-down .current-menu-item > a {
   border-left: 0.3rem solid #ff7b00;
-  &:before{
+  &:before {
     height: 0;
   }
 }
 
-
-.menu .menu-item-has-children{
-  &::after{
+.menu .menu-item-has-children {
+  &::after {
     font-family: "Font Awesome 5 Free", serif;
     font-weight: 900;
     color: white;
@@ -186,7 +185,7 @@
     content: "\f0d7";
   }
 }
-.nav--primary .menu--drop-down{
+.nav--primary .menu--drop-down {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -197,18 +196,18 @@
   background-color: white;
   box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.3);
 }
-.menu--drop-down .menu-item{
+.menu--drop-down .menu-item {
   display: block;
   margin: 0;
   padding-left: 1rem;
   line-height: 2rem;
 
-  @media @tablet{
+  @include mq(tablet) {
     padding-left: 0;
   }
 }
 
 /* Top margin first in drop down menu*/
-.menu--drop-down .menu-item-11{
+.menu--drop-down .menu-item-11 {
   margin-top: 1rem;
 }

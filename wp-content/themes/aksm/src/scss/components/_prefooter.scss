@@ -1,5 +1,7 @@
-.contact{
-  color: #00324A;
+@use '../abstracts' as *;
+
+.contact {
+  color: #00324a;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -8,74 +10,71 @@
   padding: 1rem 0;
   background: transparent;
 
-  @media @mobile{
+  @include mq(mobile) {
     flex-direction: column;
     align-items: center;
   }
 
-
-  dl{
+  dl {
     font-family: Calibri, Tahoma, Arial, Serif, serif;
     padding: 1.5rem 0;
     margin-top: 0;
 
-    @media @smallest{
+    @include mq(smallest) {
       padding: 1.5rem;
     }
 
-    & a{
+    & a {
       font-style: italic;
-      color: #00324A;
+      color: #00324a;
 
-      &:hover{
+      &:hover {
         color: #ff7b00;
       }
     }
 
-    h3{
+    h3 {
       margin-bottom: 1rem;
       text-align: center;
     }
-    dt{
+    dt {
       font-weight: bold;
       padding-top: 0.5rem;
 
-      &:first-child{
+      &:first-child {
         padding-top: 0;
       }
-
-    ;
     }
-    dd{
+    dd {
       line-height: 1.5rem;
     }
   }
 }
 
-.prefooter__link{
+.prefooter__link {
   font-style: italic;
-  &:after{
+  &:after {
     font-style: normal;
     font-family: "Font Awesome 5 Free", serif;
     font-weight: 900;
-    color: #00324A;
+    color: #00324a;
     padding: 0 0 0 0.4rem;
   }
 }
 
-.prefooter__link--map{
-  &:after{
+.prefooter__link--map {
+  &:after {
     content: "\f3c5";
   }
 }
 
-.prefooter__link--tel{
-  &:after{
+.prefooter__link--tel {
+  &:after {
     content: "\f095";
   }
 }
-.prefooter__link--account{
-  &:after{
+.prefooter__link--account {
+  &:after {
     content: "\f53d";
   }
 }

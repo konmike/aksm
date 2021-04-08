@@ -1,4 +1,6 @@
-.header{
+@use '../abstracts' as *;
+
+.header {
   position: fixed;
   top: 0;
   left: 0;
@@ -15,15 +17,15 @@
   align-items: center;
   margin-right: 0;
   margin-bottom: 0;
-  background-color: rgba(255,255,255,1);
+  background-color: rgba(255, 255, 255, 1);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.header{
-  @media @tablet {
+.header {
+  @include mq(tablet) {
     justify-content: space-between;
   }
 }
-.header--sb{
+.header--sb {
   justify-content: space-between;
 }

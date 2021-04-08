@@ -1,13 +1,15 @@
-.section{
-  &--introduction{
+@use '../abstracts' as *;
+
+.section {
+  &--introduction {
     margin: 2rem 3rem 1rem 3rem;
   }
 
-  &--support{
+  &--support {
     //background: rgba(0,0,0,.8);
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(http://aksm.cz/wp-content/uploads/2020/04/support_orez-scaled.jpg);
+      url(http://aksm.cz/wp-content/uploads/2020/04/support_orez-scaled.jpg);
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
@@ -22,34 +24,34 @@
       text-transform: uppercase;
       text-align: left;
 
-      @media @smallest{
+      @include mq(smallest) {
         text-align: center;
         margin-left: 0;
       }
     }
 
-    img{
+    img {
       margin-right: 1rem;
       margin-top: 0;
-      @media @mobile{
+      @include mq(mobile) {
         margin-top: 0.5rem;
       }
     }
-    img:last-child{
+    img:last-child {
       margin-right: 0;
-      @media @mobile{
+      @include mq(mobile) {
         margin-right: 1rem;
       }
     }
   }
 
-  &--board-members{
+  &--board-members {
     font-family: Calibri, Arial, serif;
     display: inline-grid;
     grid-template-columns: 1fr 1fr;
     padding: 2rem;
 
-    @media @mobile{
+    @include mq(mobile) {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -58,14 +60,15 @@
       padding: 2rem 1rem;
     }
 
-    .president,.member{
+    .president,
+    .member {
       width: max-content;
       min-width: 22rem;
       border: 1px solid black;
       border-radius: 0.5rem;
-      box-shadow: 0 8px 10px -4px rgba(0,0,0,0.53);
+      box-shadow: 0 8px 10px -4px rgba(0, 0, 0, 0.53);
     }
-    .president{
+    .president {
       grid-column-start: 1;
       grid-column-end: 3;
       padding: 1rem;
@@ -75,69 +78,67 @@
       align-items: center;
       justify-items: center;
 
-
-      @media @mobile{
-
+      @include mq(mobile) {
       }
 
-      @media @smallest{
+      @include mq(smallest) {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         min-width: 90%;
       }
 
-      h3{
+      h3 {
         grid-column-start: 1;
         grid-column-end: 3;
       }
 
-      h4{
+      h4 {
         grid-column-start: 1;
         grid-column-end: 3;
         margin: 0.5rem 0;
         color: #004465;
       }
 
-      dl{
+      dl {
         grid-column-start: 2;
         grid-column-end: 3;
         padding: 1rem;
         margin: 0;
       }
 
-      img{
+      img {
         width: 100px;
         grid-row-start: 3;
         grid-row-end: 4;
       }
     }
-    .member{
+    .member {
       margin: 1rem 1rem 1rem 0;
       padding: 1rem 2rem;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
 
-      @media @smallest{
+      @include mq(smallest) {
         margin-right: 0;
         min-width: 80%;
       }
     }
-    dl{
-      color: #00324A;
+    dl {
+      color: #00324a;
 
-      & a{
+      & a {
         color: #004465;
         font-style: italic;
 
-        &:hover{
+        &:hover {
           color: #ff7b00;
         }
       }
     }
 
-    h3{
+    h3 {
       color: black;
       text-transform: uppercase;
       text-align: center;
@@ -145,7 +146,7 @@
     }
   }
 
-  &--projects{
+  &--projects {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -153,25 +154,26 @@
     font-family: Calibri, Arial, serif;
     padding: 0;
 
-    & ul{
+    & ul {
       line-height: 1.7rem;
-      & a{
-        color: #00324A;
-        &:hover{
+      & a {
+        color: #00324a;
+        &:hover {
           color: #ff7b00;
         }
       }
     }
   }
 
-  &--forms,&--reports{
+  &--forms,
+  &--reports {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 3rem;
 
-    @media @mobile{
+    @include mq(mobile) {
       display: flex;
       flex-direction: column;
       padding: 2rem;
@@ -182,61 +184,61 @@
       grid-column-end: 3;
     }
 
-    ul{
+    ul {
       margin: 0;
       line-height: 1.7rem;
-      & a{
-        color: #00324A;
-        &:hover{
+      & a {
+        color: #00324a;
+        &:hover {
           color: #ff7b00;
         }
       }
     }
-    .controls{
+    .controls {
       padding-bottom: 2rem;
       text-transform: uppercase;
       font-family: Calibri, Arial, serif;
       font-weight: 900;
-      a{
+      a {
         margin: 0 0.5rem;
-        color: #00324A;
-        &:hover{
+        color: #00324a;
+        &:hover {
           color: #ff7b00;
         }
       }
     }
   }
 
-  &--general{
+  &--general {
     font-family: Calibri, Arial, serif;
     padding: 2rem 10rem 1rem 10rem;
     line-height: 1.7rem;
 
-    & a{
-      color: #00324A;
-      &:hover{
+    & a {
+      color: #00324a;
+      &:hover {
         color: #ff7b00;
       }
     }
 
-    & ul{
+    & ul {
       padding-left: 2rem;
       list-style-type: disc;
     }
 
-    @media @mobile{
+    @include mq(mobile) {
       padding: 2rem;
     }
   }
 
-  &--eu-banner{
-    font-family: Calibri,Arial,serif;
+  &--eu-banner {
+    font-family: Calibri, Arial, serif;
     padding: 2rem 0;
     width: 960px;
     margin: 0 auto;
     line-height: 1.7rem;
 
-    @media @tablet{
+    @include mq(tablet) {
       width: 100%;
       padding: 2rem;
       margin: 0;
@@ -244,54 +246,54 @@
     }
   }
 
-  &--contact{
-    color: #00324A;
+  &--contact {
+    color: #00324a;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
     flex-direction: row;
     padding: 4rem 0 1rem 0;
-    background: rgba(0,0,0,0.04);
+    background: rgba(0, 0, 0, 0.04);
     position: relative;
 
-    @media @mobile{
+    @include mq(mobile) {
       flex-direction: column;
       align-items: center;
     }
 
-    dl{
+    dl {
       font-family: Calibri, Tahoma, Arial, Serif, serif;
       padding: 1.5rem 0;
       margin-top: 0;
 
-      @media @smallest{
+      @include mq(smallest) {
         padding: 1.5rem;
       }
 
-      & a{
+      & a {
         font-style: italic;
-        color: #00324A;
+        color: #00324a;
 
-        &:hover{
+        &:hover {
           color: #ff7b00;
         }
       }
 
-      h3{
+      h3 {
         margin-bottom: 1rem;
         text-align: center;
-        color: #00324A;
+        color: #00324a;
       }
-      dt{
+      dt {
         font-weight: bold;
         padding-top: 0.5rem;
 
-        &:first-child{
+        &:first-child {
           padding-top: 0;
         }
       }
-      dd{
+      dd {
         line-height: 1.5rem;
       }
     }

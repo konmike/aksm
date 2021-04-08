@@ -1,25 +1,28 @@
-html,body{
+html,
+body {
   overflow-x: hidden;
   margin: 0;
 }
 
-h1,h2,h3{
+h1,
+h2,
+h3 {
   margin: 0;
   color: #ffffff;
   font-family: Helvetica, Calibri, Arial, serif;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-ul{
+ul {
   list-style-type: none;
   padding: 0;
 }
 
 //více informací link uvodni strana
-.link--more-info{
+.link--more-info {
   text-transform: uppercase;
   background: #ffd300;
   color: white;
@@ -27,19 +30,19 @@ ul{
   padding: 0.4rem 0.8rem;
   border-radius: 0.2rem;
   margin: 1rem 0;
-  font-family: Helvetica,Arial,Tahoma, serif;
-  transition: .4s all;
+  font-family: Helvetica, Arial, Tahoma, serif;
+  transition: 0.4s all;
 }
-.link--more-info:hover{
+.link--more-info:hover {
   background-color: #ff7b00;
 }
 
-.link--logo{
+.link--logo {
   margin-left: 1rem;
 }
 //---------------------------------
 // Odkaz na vsechny akce - uvodni strana
-.link--button-all-projects{
+.link--button-all-projects {
   box-sizing: border-box;
   border-radius: 0.2rem;
   font-size: 1.5rem;
@@ -51,44 +54,52 @@ ul{
   transition: all 0.3s;
   text-transform: uppercase;
   background: transparent;
-  color: #00324A;
+  color: #00324a;
   border: 0.1rem solid #ffd700;
   text-align: center;
 
-  &:hover{
+  &:hover {
     background: #ffd700;
   }
 }
 //------------------------------------
 //sipka na uvodni strane
-a > .fas:hover{
-  color: rgba(255,255,255,1);
-  transition: .5s all;
+a > .fas:hover {
+  color: rgba(255, 255, 255, 1);
+  transition: 0.5s all;
   animation: none;
   -webkit-animation: none;
   -moz-animation: none;
   -ms-animation: none;
 }
-.fas{
-  color: rgba(255,255,255,.5);
-  -webkit-animation:change-color 4s ease 0s infinite normal;
-  -moz-animation:change-color 4s ease 0s infinite normal;
-  -ms-animation:change-color 4s ease 0s infinite normal;
-  animation:change-color 4s ease 0s infinite normal;
+.fas {
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-animation: change-color 4s ease 0s infinite normal;
+  -moz-animation: change-color 4s ease 0s infinite normal;
+  -ms-animation: change-color 4s ease 0s infinite normal;
+  animation: change-color 4s ease 0s infinite normal;
   font-size: 4rem;
   margin-bottom: 4rem;
 }
 @-webkit-keyframes change-color {
-  0%{ color:rgba(255,255,255,.5); }
-  100%{ color:rgba(255,255,255,1); }
+  0% {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    color: rgba(255, 255, 255, 1);
+  }
 }
 
 @keyframes change-color {
-  0%{ color:rgba(255,255,255,.5); }
-  100%{ color:rgba(255,255,255,1); }
+  0% {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    color: rgba(255, 255, 255, 1);
+  }
 }
 
-.button{
+.button {
   display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -102,26 +113,25 @@ a > .fas:hover{
   line-height: 1;
   text-transform: none;
   content: attr(data-icon);
-  speak: none;
 }
 
-.button-hide{
+.button-hide {
   opacity: 0;
-  -webkit-animation: fadeOutRight 1s 1 cubic-bezier(.77,0,.175,1);
-  -moz-animation: fadeOutRight 1s 1 cubic-bezier(.77,0,.175,1);
-  -o-animation: fadeOutRight 1s 1 cubic-bezier(.77,0,.175,1);
-  animation: fadeOutRight 1s 1 cubic-bezier(.77,0,.175,1);
+  -webkit-animation: fadeOutRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-animation: fadeOutRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+  -o-animation: fadeOutRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+  animation: fadeOutRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-.button-visible{
+.button-visible {
   opacity: 1;
-  -webkit-animation: fadeInRight 1s 1 cubic-bezier(.77,0,.175,1);
-  -moz-animation: fadeInRight 1s 1 cubic-bezier(.77,0,.175,1);
-  -o-animation: fadeInRight 1s 1 cubic-bezier(.77,0,.175,1);
-  animation: fadeInRight 1s 1 cubic-bezier(.77,0,.175,1);
+  -webkit-animation: fadeInRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-animation: fadeInRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+  -o-animation: fadeInRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+  animation: fadeInRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-.button-scroll-top{
+.button-scroll-top {
   display: none;
   position: fixed;
   z-index: 99999;
@@ -135,12 +145,12 @@ a > .fas:hover{
   -moz-border-radius-bottomleft: 5px;
   border-bottom-left-radius: 5px;
   color: #fff;
-  background: rgba(0,0,0,.4);
+  background: rgba(0, 0, 0, 0.4);
   font-size: 30px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  &:before{
+  &:before {
     content: "2";
   }
 }
@@ -152,22 +162,22 @@ a > .fas:hover{
 //}
 a[target^="_blank"]:after,
 a[href^="tel:"]:after,
-a[href^="mailto:"]:after{
+a[href^="mailto:"]:after {
   font-family: "Font Awesome 5 Free", serif;
   font-weight: 900;
   font-style: normal;
   padding-left: 0.5rem;
 }
-a[target^="_blank"]:after{
+a[target^="_blank"]:after {
   content: "\f35d";
 }
-a[href^="mailto:"]:after{
+a[href^="mailto:"]:after {
   content: "\f0e0";
 }
-a[href^="tel:"]:after{
+a[href^="tel:"]:after {
   content: "\f095";
 }
 
-.grecaptcha-badge{
+.grecaptcha-badge {
   display: none !important;
 }

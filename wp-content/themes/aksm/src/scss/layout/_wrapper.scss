@@ -1,21 +1,23 @@
-.wrapper--logo{
+@use '../abstracts' as *;
+
+.wrapper--logo {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-evenly;
   padding: 1rem;
 
-  @media @mobile{
+  @include mq(mobile) {
     justify-content: space-evenly;
     flex-wrap: wrap;
   }
-  @media @smallest{
+  @include mq(smallest) {
     padding-right: 0;
   }
 }
 
-.wrapper--google-map{
-  background: #E5E3DF;
+.wrapper--google-map {
+  background: #e5e3df;
   height: 400px;
   width: 100%;
 }

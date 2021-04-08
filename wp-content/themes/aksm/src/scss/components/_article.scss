@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 .article {
   width: 100%;
   max-width: 100%;
@@ -9,7 +11,7 @@
   //align-items: stretch;
   //align-content: stretch;
 
-  .illustration-image{
+  .illustration-image {
     background-color: #191919;
     background-size: cover;
     background-repeat: no-repeat;
@@ -17,7 +19,7 @@
     height: 100%;
     display: block;
 
-    @media @mobile{
+    @include mq(mobile) {
       display: none;
     }
   }
@@ -26,7 +28,7 @@
     //height: calc(~"100vh - " 50px);
     height: auto;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("http://aksm.cz/wp-content/uploads/2020/04/csm-2017zapad.jpg");
+      url("http://aksm.cz/wp-content/uploads/2020/04/csm-2017zapad.jpg");
     background-color: #191919;
     background-size: cover;
     background-repeat: no-repeat;
@@ -37,8 +39,8 @@
     align-items: center;
     margin-top: 3.125rem;
 
-    header{
-      @media @tablet{
+    header {
+      @include mq(tablet) {
         padding: 0 0.5rem;
       }
     }
@@ -67,120 +69,122 @@
     padding: 0;
   }
 
-  &--creation{
+  &--creation {
     margin-top: 50px;
-    height: calc(~"100vh - " 50px);
+    height: calc(100vh - 50px);
     display: inline-grid;
     grid-template-columns: 1fr 1fr;
 
-    @media @mobile{
+    @include mq(mobile) {
       grid-template-columns: 1fr;
       height: auto;
     }
 
-    .content{
+    .content {
       display: flex;
       flex-direction: column;
       justify-content: center;
       padding: 0 4rem;
-      background-color: rgba(0,0,0,.02);
+      background-color: rgba(0, 0, 0, 0.02);
       //line-height: 2rem;
-      font-family: Calibri,Arial,serif;
+      font-family: Calibri, Arial, serif;
 
-      @media @mobile{
+      @include mq(mobile) {
         padding: 0 2rem;
       }
 
-      ul{
+      ul {
         margin: 0;
         line-height: 1.2rem;
-        & a{
-          color: #00324A;
+        & a {
+          color: #00324a;
 
-          &:hover{
+          &:hover {
             color: #ff7b00;
           }
         }
       }
     }
 
-    h1{
-      color: #00324A;
+    h1 {
+      color: #00324a;
       text-align: center;
       margin-bottom: 2rem;
       margin-top: 1rem;
     }
 
-    h2{
-      color: rgba(0,0,0,.8);
+    h2 {
+      color: rgba(0, 0, 0, 0.8);
     }
   }
 
-  &--focus,&--activity {
-    height: calc(100vh -  50px);
+  &--focus,
+  &--activity {
+    height: calc(100vh - 50px);
     display: inline-grid;
     grid-template-columns: 1fr 1fr;
 
-    @media @mobile{
-      grid-template-columns: 1fr;
-      height: auto;
-    }
-
-    .content{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 0 4rem;
-      background-color: rgba(0,0,0,.02);
-      //line-height: 2rem;
-      font-family: Calibri,Arial,serif;
-
-      @media @mobile{
-        padding: 2rem;
-      }
-    }
-
-    h2{
-      color: rgba(0,0,0,.8);
-    }
-  }
-
-  &--volunteer, &--prepare {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    //height: calc(~"100vh - " 50px);
-
-    @media @mobile{
+    @include mq(mobile) {
       grid-template-columns: 1fr;
       height: auto;
     }
 
     .content {
-      background-color: rgba(0,0,0,.02);
       display: flex;
       flex-direction: column;
       justify-content: center;
-      line-height: 2rem;
-      font-family: Calibri,Arial,serif;
-      padding: 2rem 4rem;
+      padding: 0 4rem;
+      background-color: rgba(0, 0, 0, 0.02);
+      //line-height: 2rem;
+      font-family: Calibri, Arial, serif;
 
-      @media @mobile{
+      @include mq(mobile) {
         padding: 2rem;
       }
     }
 
-    h1{
-      color: #00324A;
+    h2 {
+      color: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  &--volunteer,
+  &--prepare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    //height: calc(~"100vh - " 50px);
+
+    @include mq(mobile) {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+
+    .content {
+      background-color: rgba(0, 0, 0, 0.02);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 2rem;
+      font-family: Calibri, Arial, serif;
+      padding: 2rem 4rem;
+
+      @include mq(mobile) {
+        padding: 2rem;
+      }
+    }
+
+    h1 {
+      color: #00324a;
       text-align: center;
       margin-bottom: 2rem;
       margin-top: 4rem;
     }
 
-    h2{
-      color: rgba(0,0,0,.8);
+    h2 {
+      color: rgba(0, 0, 0, 0.8);
     }
-    span{
-      color: rgba(0, 0, 0, .9);
+    span {
+      color: rgba(0, 0, 0, 0.9);
       font-weight: bold;
       font-family: Helvetica, Calibri, Arial, serif;
       //display: flex;
@@ -189,29 +193,29 @@
       //align-items: center;
       padding-bottom: 1rem;
 
-      a{
+      a {
         color: #004465;
         font-style: italic;
 
-        &:hover{
+        &:hover {
           color: #ff7b00;
         }
-        &:after{
+        &:after {
           content: "";
           padding: 0;
         }
       }
 
-      @media @smallest{
+      @include mq(smallest) {
         flex-direction: column;
       }
     }
-    p{
+    p {
       margin-bottom: 0;
     }
   }
 
-  .link--next-article{
+  .link--next-article {
     color: rgb(255, 108, 1);
     font-weight: bold;
     font-family: Helvetica, Calibri, Arial, serif;
@@ -223,33 +227,33 @@
     padding-top: 1rem;
     transition: all 0.2s ease-in-out;
 
-    @media @smallest{
+    @include mq(smallest) {
       flex-direction: column;
       text-align: center;
     }
 
-    &:after{
+    &:after {
       font-family: "Font Awesome 5 Free", serif;
       content: "\f103";
       font-weight: bold;
       font-size: 2rem;
       padding-left: 1rem;
     }
-    &:hover{
+    &:hover {
       color: red;
     }
   }
 
-  &--history{
+  &--history {
     display: block;
     height: auto;
     margin-bottom: 2rem;
-    background-color: rgba(0,0,0,0.02);
-    
-    h2{
+    background-color: rgba(0, 0, 0, 0.02);
+
+    h2 {
       text-align: center;
       padding: 2rem;
-      color: rgba(0,0,0,.8);
+      color: rgba(0, 0, 0, 0.8);
     }
   }
 }

@@ -1,29 +1,33 @@
-.page{
+@use '../abstracts' as *;
+
+.page {
   margin: 0 auto;
   padding-top: 50px;
 
-  h1,h2,h3{
+  h1,
+  h2,
+  h3 {
     text-transform: uppercase;
-    color: #00324A;
+    color: #00324a;
   }
-  h1{
+  h1 {
     display: flex;
     align-items: center;
   }
 
-  &--board{
+  &--board {
     width: 960px;
 
-    @media @tablet{
+    @include mq(tablet) {
       width: 100%;
     }
 
-    h1{
+    h1 {
       padding-top: 2rem;
       align-items: stretch;
       padding-left: 2rem;
 
-      @media @tablet{
+      @include mq(tablet) {
         justify-content: center;
         padding-left: 0;
       }
@@ -41,8 +45,8 @@
     }
   }
 
-  &--projects{
-    h1{
+  &--projects {
+    h1 {
       justify-content: center;
       padding-top: 2rem;
       padding-bottom: 1rem;
@@ -50,43 +54,43 @@
     }
   }
 
-  &--forms,&--report{
+  &--forms,
+  &--report {
     display: grid;
     grid-template-columns: 1fr 1fr;
     //margin-bottom: -50px;
-    height: calc(100vh -  100px);
+    height: calc(100vh - 100px);
 
-
-    @media @smallest{
+    @include mq(smallest) {
       display: block;
       height: auto;
     }
 
-    h1{
+    h1 {
       padding-top: 2rem;
       padding-bottom: 0;
 
-      @media @mobile{
+      @include mq(mobile) {
         padding-bottom: 1rem;
         text-align: center;
       }
     }
   }
-  &--contact{
+  &--contact {
     width: 960px;
     display: flex;
     flex-direction: row;
     justify-content: center;
 
-    @media @mobile{
+    @include mq(mobile) {
       width: 100%;
       max-width: 100%;
     }
 
-    h1{
+    h1 {
       padding-top: 2rem;
 
-      &:after{
+      &:after {
         background-image: url("http://aksm.cz/wp-content/uploads/2020/04/message_orez.png");
         background-size: contain;
         background-repeat: no-repeat;
@@ -104,15 +108,15 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: calc(100vh -  50px);
+    height: calc(100vh - 50px);
     display: block;
 
-    @media @mobile{
+    @include mq(mobile) {
       display: none;
     }
   }
 
-  &--general{
+  &--general {
     width: 960px;
   }
 }

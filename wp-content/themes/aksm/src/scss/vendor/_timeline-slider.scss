@@ -1,0 +1,39 @@
+@use '../abstracts' as *;
+
+.wpostahs-slider-design-2
+  .wpostahs-slider-nav
+  .slick-current
+  .wpostahs-main-title
+  button {
+  border-color: #ff7b00;
+  background: #ff7b00;
+}
+.wpostahs-slider-design-2 .wpostahs-slider-nav .slick-current {
+  color: #ff7b00;
+}
+
+.wpostahs-slider-design-2
+  .wpostahs-slider-nav
+  .wpostahs-slider-nav-title:hover
+  .wpostahs-main-title
+  button {
+  background: #ff7b00;
+  transition: all 0.5s ease-in-out;
+}
+
+.wpostahs-slider-design-1 .wpostahs-slider-for .wpostahs-centent,
+.wpostahs-slider-design-2 .wpostahs-slider-for .wpostahs-centent p {
+  text-align: left;
+  line-height: 2rem;
+  font-family: Calibri, Arial, serif;
+  padding: 0 4rem;
+  text-indent: 1rem;
+
+  @include mq(smallest) {
+    padding: 0;
+  }
+}
+
+.slick-arrow {
+  cursor: pointer;
+}
