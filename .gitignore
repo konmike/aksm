@@ -1,5 +1,7 @@
 /*
 !.gitignore
+!package-lock.json
+!package.json
 !wp-content
 wp-content/*
 !wp-content/themes
