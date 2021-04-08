@@ -1,0 +1,214 @@
+.nav {
+  //max-width: 100%;
+  //width: 100%;
+  z-index: 1;
+  padding-left: 1rem;
+  //line-height: 3.2rem;
+}
+
+.nav--primary .menu{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0 1rem;
+  max-width: 100%;
+
+  @media @tablet, @mobile{
+    padding: 0;
+  }
+}
+.nav--hamburger .menu{
+  padding: 0;
+}
+
+.nav--primary .menu-item{
+  margin: 0 0.5rem;
+  display: block;
+
+  @media @tablet, @mobile{
+    display: none;
+  }
+}
+.nav--hamburger .menu-item{
+  display: none;
+}
+
+
+/* Mobile button - MENU */
+.nav--primary .menu .menu-item:first-child{
+  display: none;
+  @media @tablet, @mobile{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    line-height: normal;
+    box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.3);
+    //background-color: #191919;
+    cursor: pointer;
+
+    &::before{
+      font-family: "Font Awesome 5 Free", serif;
+      font-weight: 900;
+      color: #004465;
+      padding: 0 0.5rem 0 0;
+      content: "\f0c9";
+      font-size: 2rem;
+    }
+  }
+}
+.nav--hamburger .menu .menu-item:first-child{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  line-height: normal;
+  box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.3);
+  //background-color: #191919;
+  cursor: pointer;
+
+  &::before{
+    font-family: "Font Awesome 5 Free", serif;
+    font-weight: 900;
+    color: #004465;
+    padding: 0 0.5rem 0 0;
+    content: "\f0c9";
+    font-size: 2rem;
+  }
+}
+/* Close mobile menu button */
+.nav--primary .menu--drop-down .menu-item:first-child{
+  &::before{
+    font-family: "Font Awesome 5 Free", serif;
+    font-weight: 900;
+    color: #004465;
+    padding: 0 0.5rem 0 0;
+    content: "\f00d";
+    transition: all 0.3s;
+  }
+}
+
+.menu-item:first-child a{
+  border-left: 0;
+  padding: 0;
+  padding-right: 0.5rem;
+  width: min-content;
+  width: -moz-min-content;
+
+  &:hover{
+    border: 0;
+  }
+}
+
+.nav--primary a{
+  color: #004465;
+  transition: all 0.2s linear;
+  position: relative;
+  line-height: 3.2rem;
+  display: inline-block;
+
+  @media @tablet{
+    width: 100%;
+    border-left: 0.3rem solid transparent;
+    padding: 0 0.5rem;
+  }
+
+  &:hover{
+    color: #ff7b00;
+
+    @media @tablet{
+      border-left: 0.3rem solid #ff7b00;
+    }
+
+    &:before{
+      height: 5px;
+
+      @media @tablet{
+        height: 0;
+      }
+    }
+
+  }
+  &:before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0;
+    background: #ff7b00;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+}
+.nav--primary .current-menu-ancestor > a,
+.nav--primary .current-menu-item > a{
+  color: #ff7b00;
+  &:before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: #ff7b00;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.menu--drop-down .current-menu-item > a{
+  border-left: 0.3rem solid #ff7b00;
+  &:before{
+    height: 0;
+  }
+}
+
+
+.menu .menu-item-has-children{
+  &::after{
+    font-family: "Font Awesome 5 Free", serif;
+    font-weight: 900;
+    color: white;
+    padding: 0 0 0 0.4rem;
+    content: "\f0d7";
+  }
+}
+.nav--primary .menu--drop-down{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 0;
+  /* padding-right: 1rem; */
+  background-color: white;
+  box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.menu--drop-down .menu-item{
+  display: block;
+  margin: 0;
+  padding-left: 1rem;
+  line-height: 2rem;
+
+  @media @tablet{
+    padding-left: 0;
+  }
+}
+
+/* Top margin first in drop down menu*/
+.menu--drop-down .menu-item-11{
+  margin-top: 1rem;
+}
