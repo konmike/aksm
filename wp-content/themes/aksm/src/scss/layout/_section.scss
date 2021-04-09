@@ -153,6 +153,11 @@
     justify-content: space-around;
     font-family: Calibri, Arial, serif;
     padding: 0;
+    max-width: 100%;
+    transition: all 250ms;
+    &.half {
+      max-width: 50%;
+    }
 
     & ul {
       line-height: 1.7rem;

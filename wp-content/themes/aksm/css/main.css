@@ -185,6 +185,13 @@ a[href^="tel:"]:after {
   color: white;
 }
 
+.hide-information,
+.more-information {
+  font-family: Helvetica, Arial, Tahoma, serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
 .page {
   margin: 0 auto;
   padding-top: 50px;
@@ -438,6 +445,11 @@ a[href^="tel:"]:after {
   justify-content: space-around;
   font-family: Calibri, Arial, serif;
   padding: 0;
+  max-width: 100%;
+  transition: all 250ms;
+}
+.section--projects.half {
+  max-width: 50%;
 }
 .section--projects ul {
   line-height: 1.7rem;
@@ -572,6 +584,14 @@ a[href^="tel:"]:after {
 }
 .section--contact dl dd {
   line-height: 1.5rem;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem;
+  justify-content: center;
 }
 
 .wrapper--logo {
@@ -869,7 +889,7 @@ a[href^="tel:"]:after {
 .card .cover.active button {
   opacity: 1;
 }
-.card h2 {
+.card .cover h2 {
   opacity: 0;
   text-transform: uppercase;
   text-align: center;
@@ -877,21 +897,86 @@ a[href^="tel:"]:after {
   color: #fff;
   margin: 1rem 0;
 }
-.card button {
-  opacity: 0;
-  border: 2px solid #000655;
-  background-color: #000655;
+.card .content {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #004465;
+  color: white;
+  width: 50%;
+  max-width: 50%;
+  padding: 2rem 3rem;
+  box-sizing: border-box;
+  transition: all 250ms;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-right: -18px;
+  z-index: 9999999;
+}
+.card .content.hidden {
+  overflow: hidden;
+  right: -50%;
+}
+.card .content h2 {
+  color: white;
+  opacity: 1;
+  text-align: center;
+  margin: 1rem 0;
+}
+.card .content a {
+  text-decoration: underline;
+  color: white;
+  transition: all 250ms;
+}
+.card .content a:hover {
   color: #ff7b00;
-  padding: 0.4rem 1rem;
+  text-decoration: none;
+}
+.card .content img {
+  height: auto;
+}
+.card .more-information {
+  border: 2px solid #ffd300;
+  opacity: 0;
   cursor: pointer;
-  font-size: 1.3rem;
-  font-family: sans-serif;
-  border-radius: 0.5rem;
+  transition: all 250ms;
+  text-transform: uppercase;
+  background-color: #ffd300;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.2rem;
+}
+.card .more-information:hover {
+  background-color: #fff;
+  color: #ff7b00;
+}
+.card .hide-information {
+  display: flex;
+  align-items: center;
+  opacity: 1;
+  color: white;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
   transition: all 250ms;
   text-transform: uppercase;
 }
-.card button:hover {
-  background-color: #fff;
+.card .hide-information:hover {
+  background-color: transparent;
+  border: 0;
+}
+.card .hide-information:hover::before {
+  color: #ff7b00;
+}
+.card .hide-information::before {
+  content: "";
+  font-weight: 700;
+  font-family: "Font Awesome 5 Free";
+  padding-right: 0.5rem;
+  font-size: 2rem;
+  transition: color 250ms;
 }
 
 .divider {
