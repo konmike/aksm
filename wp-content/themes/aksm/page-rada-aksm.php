@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 <main>
 <div class="page page--board">
-<!--	--><?php //the_breadcrumb(); ?>
     <h1>Rada AKSM</h1>
 
     <div class="section section--board-members">

@@ -7,13 +7,11 @@
     ?>
 <main>
     <div class="article article--creation">
-	    <?php
-	    if ( ! empty($image) ){
-		    echo '<div class="content">';
-	    }
-	    else
-		    echo '<div class="content" style="grid-column: 1/3; padding: 0 15rem">';
-	    ?>
+	    <?php if ( ! empty($image) ): ?>
+	        <div class="content">
+	    <?php else : ?>
+		    <div class="content" style="grid-column: 1/3; padding: 0 15rem">
+	    <?php endif; ?>
             <h1>O nás</h1>
             <h2>Vznik</h2>
             <?=$content?>
@@ -23,11 +21,9 @@
             </a>
         </div>
 
-        <?php
-            if ( ! empty($image) ){
-                echo '<div class="illustration-image" style="background-image: url(' . $image . ')"></div>';
-            }
-        ?>
+        <?php if ( ! empty($image) ) : ?>
+            <div class="illustration-image" style="background-image: url(<?= $image ?>)"></div>
+        <?php endif; ?>
     </div>
 
 	<?php
@@ -38,14 +34,12 @@
 	?>
 
     <div id="focus" class="article article--focus">
-        <?php
-            if ( ! empty($image) ){
-	            echo '<div class="illustration-image" style="background-image: url(' . $image . ')"></div>';
-                echo '<div class="content">';
-            }
-            else
-	            echo '<div class="content" style="grid-column: 1/3; padding: 0 15rem">';
-        ?>
+        <?php if ( ! empty($image) ) : ?>
+            <div class="illustration-image" style="background-image: url(<?= $image ?>)"></div>
+            <div class="content">
+        <?php else : ?>
+            <div class="content" style="grid-column: 1/3; padding: 0 15rem">
+        <?php endif; ?>
             <h2>Zaměření</h2>
 	        <?=$content?>
 
@@ -63,24 +57,20 @@
 	?>
 
     <div id="activity" class="article article--activity" >
-	    <?php
-	    if ( ! empty($image) )
-		    echo '<div class="content">';
-	    else
-		    echo '<div class="content" style="grid-column: 1/3; padding: 0 15rem">';
-	    ?>
+	    <?php if ( ! empty($image) ) : ?>
+		    <div class="content">
+	    <?php else : ?>
+		    <div class="content" style="grid-column: 1/3; padding: 0 15rem">
+	    <?php endif; ?>
 
             <h2>Činnost</h2>
 	        <?=$content?>
         </div>
-	    <?php
-
-	    if ( ! empty($image) )
-		    echo '<div class="illustration-image" style="background-image: url(' . $image . ')"></div>';
-	    ?>
+	    
+        <?php if ( ! empty($image) ) : ?>
+		    <div class="illustration-image" style="background-image: url(<?= $image ?>)"></div>
+	    <?php endif ?>
     </div>
 
 </main>
-
-
 <?php get_footer(); ?>
