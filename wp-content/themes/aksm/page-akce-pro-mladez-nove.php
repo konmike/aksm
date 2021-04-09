@@ -2,9 +2,9 @@
 <main>
     <div id="content" class="page page--projects">
     
-        <h1><?php the_title(); ?></h1>
-
+        
         <section class="section section--projects">
+            <h1><?php the_title(); ?></h1>
 
         <?php $cats = ["4","5"]; ?>
         <?php foreach($cats as $cat) : ?>
