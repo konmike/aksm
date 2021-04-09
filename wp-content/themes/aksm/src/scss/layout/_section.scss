@@ -157,6 +157,9 @@
     transition: all 250ms;
     &.half {
       max-width: 50%;
+      .grid {
+        grid-template-columns: repeat(2, auto);
+      }
     }
 
     & ul {
