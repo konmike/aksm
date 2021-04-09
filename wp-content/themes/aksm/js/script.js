@@ -16,15 +16,15 @@
       return this;
     };
 
-    $(".more-information").on("click", function () {
+    $(".cover").on("click", function () {
       //   console.log($(this));
       $(document).closeOpenCard();
       //   console.log($(document).scrollTop());
 
-      if (!$(this).parent().hasClass("active")) {
-        $(this).parent().addClass("active");
+      if (!$(this).hasClass("active")) {
+        $(this).addClass("active");
 
-        let content = $(this).parent().siblings(".content");
+        let content = $(this).siblings(".content");
         content.removeClass("hidden");
         // let val = content[0].offsetWidth - content[0].clientWidth;
         // console.log(val);

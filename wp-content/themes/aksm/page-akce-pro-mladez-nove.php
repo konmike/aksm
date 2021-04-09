@@ -16,7 +16,7 @@
                     <div class="card" style="background-image: url(<?php the_post_thumbnail_url('card-cover') ?>);">
                         <div class="cover">
                             <h2><?php the_title() ?></h2>
-                            <button class="more-information">Více</button>
+                            <button class="more-information">Podrobnosti</button>
                         </div>
                         <div class="content hidden">
                             <button class="hide-information">Skrýt</button>

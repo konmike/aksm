@@ -878,24 +878,28 @@ a[href^="tel:"]:after {
   height: 100%;
   background-color: transparent;
   transition: background-color 200ms;
-  padding: 0 0.5rem;
-  box-sizing: border-box;
+  cursor: pointer;
 }
 .card .cover:hover, .card .cover.active {
   background-color: rgba(0, 0, 0, 0.85);
 }
-.card .cover:hover h2,
-.card .cover:hover button, .card .cover.active h2,
-.card .cover.active button {
-  opacity: 1;
+.card .cover:hover button, .card .cover.active button {
+  display: block;
+}
+.card .cover:hover h2, .card .cover.active h2 {
+  display: none;
 }
 .card .cover h2 {
-  opacity: 0;
+  opacity: 1;
   text-transform: uppercase;
   text-align: center;
-  font-family: sans-serif;
   color: #fff;
   margin: 1rem 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  width: 100%;
+  max-width: 100%;
+  padding: 0.7rem 0.5rem;
+  box-sizing: border-box;
 }
 .card .content {
   position: fixed;
@@ -937,19 +941,17 @@ a[href^="tel:"]:after {
   height: auto;
 }
 .card .more-information {
+  display: none;
   border: 2px solid #ffd300;
-  opacity: 0;
+  opacity: 1;
   cursor: pointer;
   transition: all 250ms;
   text-transform: uppercase;
   background-color: #ffd300;
   color: white;
-  padding: 0.4rem 0.8rem;
-  border-radius: 0.2rem;
-}
-.card .more-information:hover {
-  background-color: #fff;
-  color: #ff7b00;
+  padding: 0.7rem 0.8rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 .card .hide-information {
   display: flex;
