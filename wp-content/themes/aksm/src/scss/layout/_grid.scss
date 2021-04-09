@@ -1,7 +1,16 @@
+@use '../abstracts' as *;
+
 .grid {
   display: grid;
   grid-template-columns: repeat(4, auto);
   grid-row-gap: 1rem;
   margin: 1rem;
   place-items: center;
+
+  @include mq(tablet) {
+    grid-template-columns: repeat(2, auto);
+  }
+  @include mq(mobile) {
+    grid-template-columns: repeat(1, auto);
+  }
 }

@@ -157,6 +157,9 @@
     transition: all 250ms;
     &.half {
       max-width: 50%;
+      @include mq(mobile) {
+        max-width: 100%;
+      }
       .grid {
         grid-template-columns: repeat(2, auto);
       }

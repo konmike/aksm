@@ -452,6 +452,11 @@ a[href^="tel:"]:after {
 .section--projects.half {
   max-width: 50%;
 }
+@media only screen and (max-width: 52.813em) {
+  .section--projects.half {
+    max-width: 100%;
+  }
+}
 .section--projects.half .grid {
   grid-template-columns: repeat(2, auto);
 }
@@ -596,6 +601,16 @@ a[href^="tel:"]:after {
   grid-row-gap: 1rem;
   margin: 1rem;
   place-items: center;
+}
+@media only screen and (max-width: 68.125em) {
+  .grid {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+@media only screen and (max-width: 52.813em) {
+  .grid {
+    grid-template-columns: repeat(1, auto);
+  }
 }
 
 .wrapper--logo {
@@ -877,7 +892,7 @@ a[href^="tel:"]:after {
 .card .cover {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
   height: 100%;
@@ -886,10 +901,11 @@ a[href^="tel:"]:after {
   cursor: pointer;
 }
 .card .cover:hover, .card .cover.active {
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.15);
 }
-.card .cover:hover button, .card .cover.active button {
+.card .cover:hover .more-information, .card .cover.active .more-information {
   display: block;
+  opacity: 1;
 }
 .card .cover:hover h2, .card .cover.active h2 {
   display: none;
@@ -898,11 +914,16 @@ a[href^="tel:"]:after {
   opacity: 1;
   text-transform: uppercase;
   text-align: center;
+  font-size: 1.2em;
   color: #fff;
   background-color: rgba(0, 68, 101, 0.9);
   width: 100%;
   padding: 0.7rem 0.5rem;
   box-sizing: border-box;
+  height: 4.5rem;
+  display: flex;
+  place-items: center;
+  place-content: center;
 }
 .card .content {
   position: fixed;
@@ -921,9 +942,20 @@ a[href^="tel:"]:after {
   margin-right: -18px;
   z-index: 9999999;
 }
+@media only screen and (max-width: 52.813em) {
+  .card .content {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 .card .content.hidden {
   overflow: hidden;
   right: -50%;
+}
+@media only screen and (max-width: 52.813em) {
+  .card .content.hidden {
+    right: -100%;
+  }
 }
 .card .content h2 {
   color: white;
@@ -945,16 +977,17 @@ a[href^="tel:"]:after {
 }
 .card .more-information {
   display: none;
-  border: 2px solid #ffd300;
-  opacity: 1;
+  border: 2px solid #ffd500;
+  opacity: 0;
   cursor: pointer;
   transition: all 250ms;
   text-transform: uppercase;
-  background-color: #ffd300;
+  background-color: #ffd500;
   color: white;
   padding: 0.7rem 0.8rem;
   width: 100%;
   box-sizing: border-box;
+  height: 4.5rem;
 }
 .card .hide-information {
   display: flex;
