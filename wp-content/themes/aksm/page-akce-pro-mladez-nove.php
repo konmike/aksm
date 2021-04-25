@@ -6,14 +6,27 @@
         <section class="section section--projects">
             <h1><?php the_title(); ?></h1>
 
-        <?php $cats = ["4","5"]; ?>
-        <?php foreach($cats as $cat) : ?>
+            <div class="sub-menu">
+                <ul>
+                    <li id="csm" class="item active">Celostátní setkání mládeže</li>
+                    <li id="sdm" class="item">Světové dny mládeže</li>
+                    <li id="csa" class="item">Celostátní setkání animátorů</li>
+                </ul>
+            </div>
 
+    
             <div class="grid">
-            <?php $the_query = new WP_Query( array('cat' => $cat) );
+            <?php $the_query = new WP_Query( array('cat' => '3') );
                     if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-                    <div class="card" style="background-image: url(<?php the_post_thumbnail_url('card-cover') ?>);">
+            <?php $classes = "card";
+                  $classes .= (has_category(4)) ? " preparing" : "";
+                  $classes .= (has_category(5)) ? " over" : "";
+                  $classes .= (has_category(6)) ? " csm" : "";
+                  $classes .= (has_category(7)) ? " sdm" : "";
+                  $classes .= (has_category(8)) ? " csa" : "";  ?>
+
+                    <div class="<?=$classes?>" style="background-image: url(<?php the_post_thumbnail_url('card-cover') ?>);">
                         <div class="cover">
                             <h2><?php the_title() ?></h2>
                             <button class="more-information">Podrobnosti</button>
@@ -28,8 +41,7 @@
                 wp_reset_postdata();
                 endif; ?>
             </div>
-        <?php endforeach ?>    
-
+        
         </section>
 
 

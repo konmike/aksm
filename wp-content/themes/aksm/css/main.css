@@ -602,6 +602,9 @@ a[href^="tel:"]:after {
   margin: 1rem;
   place-items: center;
 }
+.grid:last-child {
+  margin-bottom: 3rem;
+}
 @media only screen and (max-width: 68.125em) {
   .grid {
     grid-template-columns: repeat(2, auto);
@@ -889,6 +892,15 @@ a[href^="tel:"]:after {
   margin: 0 0.5rem;
   box-shadow: inset 0 0 0 0px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);
 }
+.card.sdm, .card.csa {
+  display: none;
+}
+.card.preparing .cover h2 {
+  background-color: rgba(8, 119, 90, 0.9);
+}
+.card.over .cover h2 {
+  background-color: rgba(0, 68, 101, 0.9);
+}
 .card .cover {
   display: flex;
   flex-direction: column;
@@ -904,7 +916,7 @@ a[href^="tel:"]:after {
   background-color: rgba(0, 0, 0, 0.15);
 }
 .card .cover:hover .more-information, .card .cover.active .more-information {
-  display: block;
+  height: 4.5rem;
   opacity: 1;
 }
 .card .cover:hover h2, .card .cover.active h2 {
@@ -916,7 +928,6 @@ a[href^="tel:"]:after {
   text-align: center;
   font-size: 1.2em;
   color: #fff;
-  background-color: rgba(0, 68, 101, 0.9);
   width: 100%;
   padding: 0.7rem 0.5rem;
   box-sizing: border-box;
@@ -976,18 +987,17 @@ a[href^="tel:"]:after {
   height: auto;
 }
 .card .more-information {
-  display: none;
-  border: 2px solid #ffd500;
+  border: 0;
   opacity: 0;
   cursor: pointer;
   transition: all 250ms;
   text-transform: uppercase;
-  background-color: #ffd500;
+  background-color: #ff7b00;
   color: white;
-  padding: 0.7rem 0.8rem;
+  padding: 0;
   width: 100%;
   box-sizing: border-box;
-  height: 4.5rem;
+  height: 0;
 }
 .card .hide-information {
   display: flex;
@@ -1343,6 +1353,34 @@ a[href^="tel:"]:after {
 /* Top margin first in drop down menu*/
 .menu--drop-down .menu-item-11 {
   margin-top: 1rem;
+}
+
+.sub-menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.sub-menu .item {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 0.8rem;
+  font-family: Helvetica, Arial, sans-serif;
+  cursor: pointer;
+  transition: all 150ms;
+  color: #004465;
+  display: flex;
+  justify-content: center;
+}
+.sub-menu .item:hover, .sub-menu .item.active {
+  color: #ff7b00;
+}
+.sub-menu .item::after {
+  content: "|";
+  padding: 0 0.5rem;
+  color: #004465;
+}
+.sub-menu .item:last-child::after {
+  display: none;
 }
 
 .list {

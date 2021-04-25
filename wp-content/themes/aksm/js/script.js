@@ -16,6 +16,20 @@
       return this;
     };
 
+    $(".sub-menu .item").on("click", function () {
+      let ac = $(".sub-menu .active").attr("id");
+      // console.log(ac);
+      if (!$(this).hasClass("active")) {
+        $(document).closeOpenCard();
+        $(this).addClass("active");
+        let mark = $(this).attr("id");
+        // console.log(mark);
+        $("." + ac).hide();
+        $("#" + ac).removeClass("active");
+        $("." + mark).fadeIn();
+      }
+    });
+
     $(".cover").on("click", function () {
       //   console.log($(this));
       $(document).closeOpenCard();

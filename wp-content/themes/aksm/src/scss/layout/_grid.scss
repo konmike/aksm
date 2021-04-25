@@ -7,6 +7,10 @@
   margin: 1rem;
   place-items: center;
 
+  &:last-child {
+    margin-bottom: 3rem;
+  }
+
   @include mq(tablet) {
     grid-template-columns: repeat(2, auto);
   }
