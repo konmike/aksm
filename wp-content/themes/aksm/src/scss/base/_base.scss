@@ -181,3 +181,11 @@ a[href^="tel:"]:after {
 .grecaptcha-badge {
   display: none !important;
 }
+.wp-block-cover img.wp-block-cover__image-background {
+  max-height: 100%;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  aspect-ratio: auto;
+}

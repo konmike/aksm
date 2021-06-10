@@ -30,8 +30,8 @@
     </div>
 
     <div id="projects" class="article article--projects">
-
-    <?php $the_query = new WP_Query( array('cat' => '4') );
+        
+            <?php $the_query = new WP_Query( array('cat' => '4') );
                   if ( $the_query->have_posts() ) { ?> 
                 
                 <div class="grid">
@@ -45,6 +45,7 @@
                         </div>
                         <div class="content hidden">
                             <button class="hide-information">Skrýt</button>
+                            <h2><?php the_title() ?></h2>
                             <?php the_content() ?>
                         </div>
                     </div>  
@@ -69,6 +70,7 @@
                         </div>
                         <div class="content hidden">
                             <button class="hide-information">Skrýt</button>
+                            <h2><?php the_title() ?></h2>
                             <?php the_content() ?>
                         </div>
                     </div>  
@@ -83,14 +85,6 @@
         <a href="/?page_id=10" class="link--button-all-projects">
             Všechny akce pro mládež
         </a>
-
-
-        <!-- <?php //echo do_shortcode('[PGP id=88]') ?>
-        <?php //echo do_shortcode('[PGP id=44]') ?>
-
-        <a href="/?page_id=10" class="link--button-all-projects">
-            Všechny akce pro mládež
-        </a> -->
     </div>
 
     <div class="section section--support">
