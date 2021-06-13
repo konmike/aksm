@@ -102,7 +102,6 @@ a > .fas:hover {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: ETmodules;
   font-size: 96px;
   font-weight: 400;
   font-style: normal;
@@ -150,7 +149,9 @@ a > .fas:hover {
   cursor: pointer;
 }
 .button-scroll-top:before {
-  content: "2";
+  font-family: "Font Awesome 5 Free";
+  content: "";
+  font-weight: 700;
 }
 
 a[target^=_blank]:after,
@@ -235,7 +236,7 @@ a[href^="tel:"]:after {
   }
 }
 .page--board h1:after {
-  background-image: url("http://aksm.cz/wp-content/uploads/2020/04/board.png");
+  background-image: url("/wp-content/uploads/2020/04/board.png");
   background-size: contain;
   background-repeat: no-repeat;
   margin-left: 1rem;
@@ -288,7 +289,7 @@ a[href^="tel:"]:after {
   padding-top: 2rem;
 }
 .page--contact h1:after {
-  background-image: url("http://aksm.cz/wp-content/uploads/2020/04/message_orez.png");
+  background-image: url("/wp-content/uploads/2020/04/message_orez.png");
   background-size: contain;
   background-repeat: no-repeat;
   margin-left: 1rem;
@@ -318,7 +319,7 @@ a[href^="tel:"]:after {
   margin: 2rem 3rem 1rem 3rem;
 }
 .section--support {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(http://aksm.cz/wp-content/uploads/2020/04/support_orez-scaled.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/wp-content/uploads/2020/04/support_orez-scaled.jpg");
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
@@ -670,7 +671,7 @@ a[href^="tel:"]:after {
 }
 .article--introduction {
   height: auto;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://aksm.cz/wp-content/uploads/2020/04/csm-2017zapad.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/wp-content/uploads/2020/04/csm-2017zapad.jpg");
   background-color: #191919;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1075,7 +1076,7 @@ a[href^="tel:"]:after {
 }
 
 .divider--bottom-intro {
-  background-image: url("http://aksm.cz/wp-content/uploads/2020/04/prechod-sedy.svg");
+  background-image: url("/wp-content/uploads/2020/04/prechod-sedy.svg");
   background-size: 100% 100px;
   bottom: 0;
   height: 100px;
@@ -1083,7 +1084,7 @@ a[href^="tel:"]:after {
 }
 
 .divider--vertical-center {
-  background-image: url("http://aksm.cz/wp-content/uploads/2020/04/prechod-sedy.svg");
+  background-image: url("/wp-content/uploads/2020/04/prechod-sedy.svg");
   background-size: 100% 100px;
   bottom: 0;
   height: 100px;
@@ -1091,7 +1092,7 @@ a[href^="tel:"]:after {
 }
 
 .divider--top-support {
-  background-image: url("http://aksm.cz/wp-content/uploads/2020/04/prechod-bily.svg");
+  background-image: url("/wp-content/uploads/2020/04/prechod-bily.svg");
   background-size: 100% 25px;
   top: 0;
   height: 25px;
@@ -1099,7 +1100,7 @@ a[href^="tel:"]:after {
 }
 
 .divider--bottom-support {
-  background-image: url("http://aksm.cz/wp-content/uploads/2020/04/prechod-bily.svg");
+  background-image: url("/wp-content/uploads/2020/04/prechod-bily.svg");
   background-size: 100% 25px;
   bottom: 0;
   height: 25px;
@@ -1108,7 +1109,7 @@ a[href^="tel:"]:after {
 }
 
 .divider--top-contact {
-  background-image: url("http://aksm.cz/wp-content/uploads/2020/04/prechod-bily.svg");
+  background-image: url("/wp-content/uploads/2020/04/prechod-bily.svg");
   background-size: 100% 25px;
   top: 0;
   height: 25px;
@@ -1444,15 +1445,15 @@ a[href^="tel:"]:after {
 }
 
 .list--introduction-1 li:nth-child(2):before {
-  content: url("http://aksm.cz/wp-content/uploads/2020/04/reunion-e1577987252103.png");
+  content: url("/wp-content/uploads/2020/04/reunion-e1577987252103.png");
 }
 
 .list--introduction-1 li:nth-child(3):before {
-  content: url("http://aksm.cz/wp-content/uploads/2020/04/education-e1577987152212.png");
+  content: url("/wp-content/uploads/2020/04/education-e1577987152212.png");
 }
 
 .list--introduction-2 li:nth-child(2):before {
-  content: url("http://aksm.cz/wp-content/uploads/2020/04/accreditation-e1577986998693.png");
+  content: url("/wp-content/uploads/2020/04/accreditation-e1577986998693.png");
 }
 
 .list--introduction-1 li:nth-child(2):before,

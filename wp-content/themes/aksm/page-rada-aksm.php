@@ -15,7 +15,7 @@
                 <dt>Telefon</dt>
                 <dd><a href="tel:+420731625720">+420 731 625 720</a></dd>
             </dl>
-            <img src="http://aksm.cz/wp-content/uploads/2020/04/majka-1.png" alt="Ing. Marie Světničková" />
+            <img src="https://aksm.cz/wp-content/uploads/2020/04/majka-1.png" alt="Ing. Marie Světničková" />
         </div>
 
         <div class="member">
@@ -173,7 +173,7 @@
                 <dd>Brno</dd>
                 <dd>602 00</dd>
                 <dt>Web</dt>
-                <dd><a target="_blank" href="http://www.signaly.cz">www.signaly.cz</a></dd>
+                <dd><a target="_blank" href="https://www.signaly.cz">www.signaly.cz</a></dd>
                 <dt>E-mail</dt>
                 <dd><a href="mailto:predseda@signaly.cz">predseda@signaly.cz</a></dd>
                 <dt>Telefon</dt>

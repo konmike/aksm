@@ -20,7 +20,6 @@ function themeslug_enqueue_script() {
 	wp_enqueue_style( 'main', get_stylesheet_directory_uri() . '/css/main.css', false );
 
 	wp_enqueue_style( 'font-awesome', 'https://use.fontawesome.com/releases/v5.3.1/css/all.css' );
-	wp_enqueue_style( 'font-etmodules', '//db.onlinewebfonts.com/c/9d25ea5c587d0f9d470aa9a3634735ea?family=ETmodules' );
 	wp_enqueue_style( 'animate', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css' );
 	// here you can enqueue more js / css files
 }

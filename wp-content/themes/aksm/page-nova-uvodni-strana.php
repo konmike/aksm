@@ -91,11 +91,11 @@
         <div class="divider divider--top-support"></div>
         <h3 class="title">Podporují nás</h3>
         <div class="wrapper wrapper--logo">
-            <img src="http://aksm.cz/wp-content/uploads/2020/04/cbk.png" alt="Česká biskupská konference">
-            <img src="http://aksm.cz/wp-content/uploads/2020/04/msmt.png" alt="Ministerstvo školství, mládeže a tělovýchovy">
-            <img src="http://aksm.cz/wp-content/uploads/2020/04/mv.png" alt="Ministerstvo vnitra">
-            <img src="http://aksm.cz/wp-content/uploads/2020/04/EU.png" alt="Evropská unie">
-			<img src="http://aksm.cz/wp-content/uploads/2021/01/logo.png" alt="RVD">
+            <img src="https://aksm.cz/wp-content/uploads/2020/04/cbk.png" alt="Česká biskupská konference">
+            <img src="https://aksm.cz/wp-content/uploads/2020/04/msmt.png" alt="Ministerstvo školství, mládeže a tělovýchovy">
+            <img src="https://aksm.cz/wp-content/uploads/2020/04/mv.png" alt="Ministerstvo vnitra">
+            <img src="https://aksm.cz/wp-content/uploads/2020/04/EU.png" alt="Evropská unie">
+			<img src="https://aksm.cz/wp-content/uploads/2021/01/logo.png" alt="RVD">
         </div>
 		
         <div class="divider divider--bottom-support"></div>
