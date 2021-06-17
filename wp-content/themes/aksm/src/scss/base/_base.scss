@@ -191,3 +191,12 @@ a[href^="tel:"]:after {
   text-align: center;
   aspect-ratio: auto;
 }
+
+.section--projects {
+  .sdm,
+  .csa,
+  .kom,
+  .cfm {
+    display: none;
+  }
+}

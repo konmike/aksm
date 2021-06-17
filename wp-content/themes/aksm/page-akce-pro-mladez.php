@@ -12,10 +12,25 @@
                     <li id="sdm" class="item">Světové dny mládeže</li>
                     <li id="csa" class="item">Celostátní setkání animátorů</li>
                     <li id="kom" class="item">Konference o mládeži</li>
+                    <li id="cfm" class="item">Celostátní fóra mládeže</li>
                 </ul>
             </div>
 
-    
+            <?php
+                $id_posts = array(597,601,603,607,610);
+                $cl = array('csm', 'sdm', 'csa', 'kom', 'cfm');
+                
+                for ($i=0; $i < 5; $i++): 
+                    $introducePost = get_post($id_posts[$i]);
+                    $content = $introducePost->post_content;
+            ?>
+
+                <div class="<?=$cl[$i]?> general">
+                <?=$content?>
+                </div>
+
+            <?php endfor; ?>
+
             <div class="grid">
             <?php $the_query = new WP_Query( array('cat' => '3', 'posts_per_page' => -1) );
                     if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>

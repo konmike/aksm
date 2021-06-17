@@ -157,6 +157,12 @@
     transition: all 250ms;
     min-height: 100vh;
 
+    .general {
+      max-width: 50%;
+      line-height: 2rem;
+      margin: 2rem 0;
+    }
+
     &.half {
       max-width: 50%;
       @include mq(mobile) {
