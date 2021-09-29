@@ -30,6 +30,37 @@
     </div>
 
     <div id="projects" class="article article--projects">
+
+    <ul class="news">
+        <h2>Aktuality</h2>
+            <?php $the_query = new WP_Query( array('cat' => '10', 'posts_per_page' => 3) );
+                                if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+            <li>
+                <article>
+
+                <h3>
+                    <?php the_title() ?>
+                </h3>
+
+                <span class="date">
+                    <?php echo get_the_date() ?>
+                </span>
+
+                <?php the_content() ?>
+                <a class="button button--light" href="<?php the_permalink(); ?>">Více</a>
+
+                </article>
+            </li>    
+            <?php
+
+            endwhile;                 
+            endif; ?>
+
+            <a href="https://aksm.cz/category/aktuality" class="link--button-all-projects">Všechny aktuality</a>
+        </ul>
+
+        <div class="projects">
+
         
             <?php $the_query = new WP_Query( array('cat' => '4') );
                   if ( $the_query->have_posts() ) { ?> 
@@ -85,6 +116,7 @@
         <a href="/?page_id=10" class="link--button-all-projects">
             Všechny akce pro mládež
         </a>
+        </div>
     </div>
 
     <div class="section section--support">

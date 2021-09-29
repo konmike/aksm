@@ -1,4 +1,4 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .page {
   margin: 0 auto;
@@ -52,6 +52,76 @@
       padding-bottom: 1rem;
       text-align: center;
       font-size: 2em;
+    }
+  }
+
+  &--category {
+    display: flex;
+    justify-content: center;
+
+    width: 960px;
+    min-height: calc(100vh - 102px);
+
+    header {
+      margin-right: 2rem;
+      position: relative;
+      width: 25%;
+      // background-color: rgb(255 222 83 / 50%);
+      display: flex;
+      justify-content: center;
+    }
+
+    h1 {
+      position: fixed;
+      padding-top: 2rem;
+    }
+
+    .news {
+      width: 50%;
+      margin-top: 2rem;
+    }
+
+    p {
+      font-family: Calibri, Arial, serif;
+      // margin-bottom: 0.5rem;
+      // margin-top: 0.5rem;
+
+      // &:first-child {
+      //   margin-top: 1rem;
+      //   margin-bottom: 1rem;
+      // }
+    }
+  }
+
+  &--post-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    font-family: Calibri, Arial, serif;
+    // margin-top: 2rem;
+    width: 960px;
+    min-height: calc(100vh - 102px);
+
+    h3 {
+      line-height: 1.6rem;
+    }
+
+    .content {
+      max-width: 75%;
+    }
+    .date {
+      font-family: Calibri, Arial, serif;
+      font-size: 0.8rem;
+      color: rgba(0, 0, 0, 0.5);
+    }
+    p {
+      margin-bottom: 0.5rem;
+      margin-top: 0.5rem;
+
+      &:first-child {
+        margin-top: 1rem;
+      }
     }
   }
 

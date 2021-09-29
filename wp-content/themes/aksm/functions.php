@@ -25,20 +25,25 @@ function themeslug_enqueue_script() {
 }
 
 function the_breadcrumb() {
-	$sep = ' > ';
+	// $sep = ' > ';
+	$sep = ''; //definovan v css
 	if (!is_front_page()) {
 
 		// Start the breadcrumb with a link to your homepage
-		echo '<div class="breadcrumbs">';
+		echo '<ul class="breadcrumb">';
+		echo '<li>';
 		echo '<a href="';
 		echo get_option('home');
 		echo '">';
-		bloginfo('name');
-		echo '</a>' . $sep;
+		// bloginfo('name');
+		echo 'Domů';
+		echo '</a></li>' . $sep;
 
 		// Check if the current page is a category, an archive or a single page. If so show the category or archive name.
 		if (is_category() || is_single() ){
+			echo '<li>';
 			the_category('title_li=');
+			echo '</li>';
 		} elseif (is_archive() || is_single()){
 			if ( is_day() ) {
 				printf( __( '%s', 'text_domain' ), get_the_date() );
@@ -53,8 +58,9 @@ function the_breadcrumb() {
 
 		// If the current page is a single post, show its title with the separator
 		if (is_single()) {
-			echo $sep;
+			echo $sep . '<li>';
 			the_title();
+			echo '</li>';
 		}
 
 		// If the current page is a static page, show its title.
@@ -73,7 +79,7 @@ function the_breadcrumb() {
 				rewind_posts();
 			}
 		}
-		echo '</div>';
+		echo '</ul>';
 	}
 }
 

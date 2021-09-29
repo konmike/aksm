@@ -1,4 +1,4 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .article {
   width: 100%;
@@ -63,10 +63,38 @@
 
   &--projects {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
     padding: 0;
+
+    .news {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0 3rem 0 1rem;
+      min-width: 30%;
+
+      h2 {
+        text-transform: uppercase;
+        color: #00324a;
+        margin: 0 0 1.5rem 0;
+        text-align: center;
+        width: 100%;
+      }
+      h3 {
+        color: rgba(0, 0, 0, 0.8);
+        font-size: 1rem;
+        // line-height: 1.3rem;
+      }
+    }
+    .projects {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0;
+    }
   }
 
   &--creation {

@@ -1,0 +1,25 @@
+.button {
+  font-size: 1rem;
+
+  &--light {
+    padding: 0.5rem;
+
+    font-weight: bold;
+    font-family: Calibri, Arial, serif;
+    text-transform: uppercase;
+    text-align: center;
+
+    background: transparent;
+    color: #00324a;
+
+    border-radius: 0.2rem;
+    border: 0.1rem solid #ffd700;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background: #ffd700;
+    }
+  }
+}

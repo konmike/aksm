@@ -1,17 +1,35 @@
-.breadcrumbs{
+.breadcrumb {
+  display: flex;
   text-transform: uppercase;
-  font-style: italic;
-  padding: 2rem;
+  // color: rgba(0, 0, 0, 0.6);
+  color: #ff7b00;
+  padding: 2rem 2rem 1rem 0;
+  font-size: 0.8rem;
   font-weight: bold;
   font-family: Tahoma, Calibri, Arial, serif;
-  a{
-    color: #004465;
+
+  li {
+    &::after {
+      content: "\f0da";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 700;
+      padding: 0 1rem;
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
+
+  a {
+    color: rgba(0, 68, 101, 0.6);
     transition: all 0.2s ease-in-out;
   }
-  a:hover{
+  a:hover {
     color: #ff7b00;
   }
-  span{
-    color: #ff7b00;
-  }
+  // span {
+  //   color: #ff7b00;
+  // }
 }

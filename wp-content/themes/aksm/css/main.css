@@ -49,7 +49,7 @@ ul {
   font-weight: bold;
   font-family: Calibri, Arial, serif;
   padding: 0.5rem;
-  margin: 1rem 0 2rem 0;
+  margin: 1rem auto 2rem auto;
   cursor: pointer;
   transition: all 0.3s;
   text-transform: uppercase;
@@ -258,6 +258,56 @@ a[href^="tel:"]:after {
   padding-bottom: 1rem;
   text-align: center;
   font-size: 2em;
+}
+.page--category {
+  display: flex;
+  justify-content: center;
+  width: 960px;
+  min-height: calc(100vh - 102px);
+}
+.page--category header {
+  margin-right: 2rem;
+  position: relative;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+}
+.page--category h1 {
+  position: fixed;
+  padding-top: 2rem;
+}
+.page--category .news {
+  width: 50%;
+  margin-top: 2rem;
+}
+.page--category p {
+  font-family: Calibri, Arial, serif;
+}
+.page--post-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: Calibri, Arial, serif;
+  width: 960px;
+  min-height: calc(100vh - 102px);
+}
+.page--post-detail h3 {
+  line-height: 1.6rem;
+}
+.page--post-detail .content {
+  max-width: 75%;
+}
+.page--post-detail .date {
+  font-family: Calibri, Arial, serif;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+.page--post-detail p {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+.page--post-detail p:first-child {
+  margin-top: 1rem;
 }
 .page--forms, .page--report {
   display: grid;
@@ -713,6 +763,31 @@ a[href^="tel:"]:after {
 }
 .article--projects {
   display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+}
+.article--projects .news {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 3rem 0 1rem;
+  min-width: 30%;
+}
+.article--projects .news h2 {
+  text-transform: uppercase;
+  color: #00324a;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+  width: 100%;
+}
+.article--projects .news h3 {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 1rem;
+}
+.article--projects .projects {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
@@ -887,22 +962,52 @@ a[href^="tel:"]:after {
   color: rgba(0, 0, 0, 0.8);
 }
 
-.breadcrumbs {
+.breadcrumb {
+  display: flex;
   text-transform: uppercase;
-  font-style: italic;
-  padding: 2rem;
+  color: #ff7b00;
+  padding: 2rem 2rem 1rem 0;
+  font-size: 0.8rem;
   font-weight: bold;
   font-family: Tahoma, Calibri, Arial, serif;
 }
-.breadcrumbs a {
-  color: #004465;
+.breadcrumb li::after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 700;
+  padding: 0 1rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+.breadcrumb li:last-child::after {
+  display: none;
+}
+.breadcrumb a {
+  color: rgba(0, 68, 101, 0.6);
   transition: all 0.2s ease-in-out;
 }
-.breadcrumbs a:hover {
+.breadcrumb a:hover {
   color: #ff7b00;
 }
-.breadcrumbs span {
-  color: #ff7b00;
+
+.button {
+  font-size: 1rem;
+}
+.button--light {
+  padding: 0.5rem;
+  font-weight: bold;
+  font-family: Calibri, Arial, serif;
+  text-transform: uppercase;
+  text-align: center;
+  background: transparent;
+  color: #00324a;
+  border-radius: 0.2rem;
+  border: 0.1rem solid #ffd700;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.button--light:hover {
+  background: #ffd700;
 }
 
 .card {
@@ -1405,6 +1510,29 @@ a[href^="tel:"]:after {
 /* Top margin first in drop down menu*/
 .menu--drop-down .menu-item-11 {
   margin-top: 1rem;
+}
+
+.news .date {
+  font-family: Calibri, Arial, serif;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+.news li {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  padding-bottom: 0.5rem;
+  width: 100%;
+}
+.news li:last-child {
+  border-bottom: none;
+}
+.news li h3 {
+  color: rgba(0, 0, 0, 0.8);
+  text-transform: none;
+  line-height: 1.6rem;
+}
+.news li p {
+  font-family: Calibri, Arial, serif;
 }
 
 .sub-menu ul {

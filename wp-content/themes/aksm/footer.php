@@ -1,7 +1,7 @@
 <footer class="footer footer--bottom">
     <div class="copyright">
         <a href="/?page_id=16/" class="link link--cookies">Zpracování osobních údajů</a>
-        <span>Vytvořil: Michal Konečný, 2020</span>
+        <span>Vytvořil: <a href="https://konecnymichal.cz" class="link">Michal Konečný</a>, 2020</span>
     </div>
 </footer>
 

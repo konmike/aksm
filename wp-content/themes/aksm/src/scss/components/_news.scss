@@ -1,0 +1,27 @@
+.news {
+  .date {
+    font-family: Calibri, Arial, serif;
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  li {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    padding-bottom: 0.5rem;
+    width: 100%;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    h3 {
+      color: rgba(0, 0, 0, 0.8);
+      text-transform: none;
+      line-height: 1.6rem;
+    }
+
+    p {
+      font-family: Calibri, Arial, serif;
+    }
+  }
+}
