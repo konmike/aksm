@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 .breadcrumb {
   display: flex;
   text-transform: uppercase;
@@ -7,6 +9,10 @@
   font-size: 0.8rem;
   font-weight: bold;
   font-family: Tahoma, Calibri, Arial, serif;
+
+  @include mq(tablet) {
+    padding: 3rem;
+  }
 
   li {
     &::after {

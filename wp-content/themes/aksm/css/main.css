@@ -265,6 +265,13 @@ a[href^="tel:"]:after {
   width: 960px;
   min-height: calc(100vh - 102px);
 }
+@media only screen and (max-width: 68.125em) {
+  .page--category {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
 .page--category header {
   margin-right: 2rem;
   position: relative;
@@ -272,9 +279,19 @@ a[href^="tel:"]:after {
   display: flex;
   justify-content: center;
 }
+@media only screen and (max-width: 68.125em) {
+  .page--category header {
+    width: 100%;
+  }
+}
 .page--category h1 {
   position: fixed;
   padding-top: 2rem;
+}
+@media only screen and (max-width: 68.125em) {
+  .page--category h1 {
+    position: static;
+  }
 }
 .page--category .news {
   width: 50%;
@@ -290,6 +307,12 @@ a[href^="tel:"]:after {
   font-family: Calibri, Arial, serif;
   width: 960px;
   min-height: calc(100vh - 102px);
+}
+@media only screen and (max-width: 68.125em) {
+  .page--post-detail {
+    width: 100%;
+    align-items: center;
+  }
 }
 .page--post-detail h3 {
   line-height: 1.6rem;
@@ -768,6 +791,12 @@ a[href^="tel:"]:after {
   justify-content: center;
   padding: 0;
 }
+@media only screen and (max-width: 68.125em) {
+  .article--projects {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .article--projects .news {
   display: flex;
   flex-direction: column;
@@ -786,12 +815,23 @@ a[href^="tel:"]:after {
   color: rgba(0, 0, 0, 0.8);
   font-size: 1rem;
 }
+@media only screen and (max-width: 68.125em) {
+  .article--projects .news {
+    align-items: center;
+    padding: 0 2rem;
+  }
+}
 .article--projects .projects {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   padding: 0;
+}
+@media only screen and (max-width: 68.125em) {
+  .article--projects .projects {
+    align-items: center;
+  }
 }
 .article--creation {
   margin-top: 50px;
@@ -970,6 +1010,11 @@ a[href^="tel:"]:after {
   font-size: 0.8rem;
   font-weight: bold;
   font-family: Tahoma, Calibri, Arial, serif;
+}
+@media only screen and (max-width: 68.125em) {
+  .breadcrumb {
+    padding: 3rem;
+  }
 }
 .breadcrumb li::after {
   content: "";

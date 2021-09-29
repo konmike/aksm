@@ -58,9 +58,14 @@
   &--category {
     display: flex;
     justify-content: center;
-
     width: 960px;
     min-height: calc(100vh - 102px);
+
+    @include mq(tablet) {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
 
     header {
       margin-right: 2rem;
@@ -69,11 +74,17 @@
       // background-color: rgb(255 222 83 / 50%);
       display: flex;
       justify-content: center;
+      @include mq(tablet) {
+        width: 100%;
+      }
     }
 
     h1 {
       position: fixed;
       padding-top: 2rem;
+      @include mq(tablet) {
+        position: static;
+      }
     }
 
     .news {
@@ -97,11 +108,14 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
     font-family: Calibri, Arial, serif;
-    // margin-top: 2rem;
     width: 960px;
     min-height: calc(100vh - 102px);
+
+    @include mq(tablet) {
+      width: 100%;
+      align-items: center;
+    }
 
     h3 {
       line-height: 1.6rem;
