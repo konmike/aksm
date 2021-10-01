@@ -56,7 +56,7 @@
             endwhile;                 
             endif; ?>
 
-            <a href="https://aksm.cz/category/aktuality" class="link--button-all-projects">Všechny aktuality</a>
+            <a href="https://aksm.cz/category/aktuality" class="button button--light button--big">Všechny aktuality</a>
         </ul>
 
         <div class="projects">
@@ -109,7 +109,7 @@
             
                 </div>
 
-        <a href="/?page_id=10" class="link--button-all-projects">
+        <a href="/?page_id=10" class="button button--light button--big">
             Všechny akce pro mládež
         </a>
             </div>

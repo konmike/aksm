@@ -821,6 +821,9 @@ a[href^="tel:"]:after {
     padding: 0 2rem;
   }
 }
+.article--projects .button--big {
+  margin: 1rem auto 2rem auto;
+}
 .article--projects .projects {
   display: flex;
   flex-direction: column;
@@ -1053,6 +1056,9 @@ a[href^="tel:"]:after {
 }
 .button--light:hover {
   background: #ffd700;
+}
+.button--big {
+  font-size: 1.5rem;
 }
 
 .card {
