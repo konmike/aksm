@@ -22,17 +22,20 @@
             <?=$content?>
         </section>
 
-        <a href="#projects" class="smooth-scroll link--double-down">
+        <a href="#news" class="smooth-scroll link--double-down">
             <i class="fas fa-angle-double-down"></i>
         </a>
 
         <div class="divider divider--bottom-intro"></div>
     </div>
 
-    <div id="projects" class="article article--projects">
+    <div id="news" class="article article--news">
 
-    <ul class="news">
+    <header>
         <h2>Aktuality</h2>
+    </header>
+    <ul class="news">
+        
             <?php $the_query = new WP_Query( array('cat' => '10', 'posts_per_page' => 3) );
                                 if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
             <li>
@@ -59,6 +62,12 @@
             <a href="https://aksm.cz/category/aktuality" class="button button--light button--big">Všechny aktuality</a>
         </ul>
 
+    </div>
+
+    <div class="article article--projects article--projects">
+
+
+    
         <div class="projects">
     <?php $the_query = new WP_Query( array('cat' => '4') );
                   if ( $the_query->have_posts() ) { ?> 

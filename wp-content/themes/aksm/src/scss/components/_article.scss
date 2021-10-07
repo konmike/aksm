@@ -61,6 +61,33 @@
     }
   }
 
+  &--news {
+    max-width: 960px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+
+    header {
+      margin-right: 2rem;
+      h2 {
+        text-transform: uppercase;
+        color: #00324a;
+      }
+    }
+
+    .news {
+      margin-top: 0;
+      width: 50%;
+    }
+
+    .button--big {
+      display: block;
+      width: fit-content;
+      margin: 1rem auto 0 auto;
+    }
+  }
+
   &--projects {
     display: flex;
     flex-direction: row;
@@ -73,30 +100,23 @@
       align-items: center;
     }
 
-    .news {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 0 3rem 0 1rem;
-      min-width: 30%;
-
-      h2 {
-        text-transform: uppercase;
-        color: #00324a;
-        margin: 0 0 1.5rem 0;
-        text-align: center;
-        width: 100%;
-      }
-      h3 {
-        color: rgba(0, 0, 0, 0.8);
-        font-size: 1rem;
-        // line-height: 1.3rem;
-      }
-      @include mq(tablet) {
-        align-items: center;
-        padding: 0 2rem;
-      }
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: -25%;
+      width: 150%;
+      height: 30px;
+      transform: rotate(-3deg);
+      transform-origin: 3% 0;
+      margin: 3rem 0;
+      background: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 1) 20%,
+        rgba(255, 254, 189, 1) 100%
+      );
     }
+
     .button--big {
       margin: 1rem auto 2rem auto;
     }
@@ -105,7 +125,8 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-around;
-      padding: 0;
+      padding: 6rem 0 0 0;
+
       @include mq(tablet) {
         align-items: center;
       }

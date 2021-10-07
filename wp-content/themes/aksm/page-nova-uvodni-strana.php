@@ -29,10 +29,13 @@
         <div class="divider divider--bottom-intro"></div>
     </div>
 
-    <div id="projects" class="article article--projects">
+    <div class="article article--news">
 
-    <ul class="news">
+    <header>
         <h2>Aktuality</h2>
+    </header>
+    <ul class="news">
+        
             <?php $the_query = new WP_Query( array('cat' => '10', 'posts_per_page' => 3) );
                                 if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
             <li>
@@ -59,6 +62,11 @@
             <a href="https://aksm.cz/category/aktuality" class="link--button-all-projects">Všechny aktuality</a>
         </ul>
 
+    </div>
+
+    <div id="projects" class="article article--projects article--projects article--bef">
+
+    
         <div class="projects">
 
         

@@ -784,6 +784,29 @@ a[href^="tel:"]:after {
   border-bottom: 5px solid #ffd300;
   width: min-content;
 }
+.article--news {
+  max-width: 960px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.article--news header {
+  margin-right: 2rem;
+}
+.article--news header h2 {
+  text-transform: uppercase;
+  color: #00324a;
+}
+.article--news .news {
+  margin-top: 0;
+  width: 50%;
+}
+.article--news .button--big {
+  display: block;
+  width: fit-content;
+  margin: 1rem auto 0 auto;
+}
 .article--projects {
   display: flex;
   flex-direction: row;
@@ -797,29 +820,17 @@ a[href^="tel:"]:after {
     align-items: center;
   }
 }
-.article--projects .news {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0 3rem 0 1rem;
-  min-width: 30%;
-}
-.article--projects .news h2 {
-  text-transform: uppercase;
-  color: #00324a;
-  margin: 0 0 1.5rem 0;
-  text-align: center;
-  width: 100%;
-}
-.article--projects .news h3 {
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 1rem;
-}
-@media only screen and (max-width: 68.125em) {
-  .article--projects .news {
-    align-items: center;
-    padding: 0 2rem;
-  }
+.article--projects::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -25%;
+  width: 150%;
+  height: 30px;
+  transform: rotate(-3deg);
+  transform-origin: 3% 0;
+  margin: 3rem 0;
+  background: linear-gradient(45deg, white 20%, #fffebd 100%);
 }
 .article--projects .button--big {
   margin: 1rem auto 2rem auto;
@@ -829,7 +840,7 @@ a[href^="tel:"]:after {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  padding: 0;
+  padding: 6rem 0 0 0;
 }
 @media only screen and (max-width: 68.125em) {
   .article--projects .projects {
