@@ -261,6 +261,8 @@ a[href^="tel:"]:after {
 }
 .page--category {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   width: 960px;
   min-height: calc(100vh - 102px);
@@ -275,7 +277,6 @@ a[href^="tel:"]:after {
 .page--category header {
   margin-right: 2rem;
   position: relative;
-  width: 25%;
   display: flex;
   justify-content: center;
 }
@@ -285,7 +286,6 @@ a[href^="tel:"]:after {
   }
 }
 .page--category h1 {
-  position: fixed;
   padding-top: 2rem;
 }
 @media only screen and (max-width: 68.125em) {
@@ -294,8 +294,7 @@ a[href^="tel:"]:after {
   }
 }
 .page--category .news {
-  width: 50%;
-  margin-top: 2rem;
+  width: 80%;
 }
 .page--category p {
   font-family: Calibri, Arial, serif;
@@ -790,17 +789,17 @@ a[href^="tel:"]:after {
   margin-bottom: 2rem;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
-.article--news header {
-  margin-right: 2rem;
-}
-.article--news header h2 {
-  text-transform: uppercase;
+.article--news h1 {
   color: #00324a;
+  margin: 2rem 0;
+  text-transform: uppercase;
 }
 .article--news .news {
   margin-top: 0;
-  width: 50%;
+  width: 80%;
 }
 .article--news .button--big {
   display: block;
@@ -1574,24 +1573,52 @@ a[href^="tel:"]:after {
   margin-top: 1rem;
 }
 
-.news .date {
-  font-family: Calibri, Arial, serif;
-  font-size: 0.8rem;
-  color: rgba(0, 0, 0, 0.5);
-}
 .news li {
   margin-bottom: 1rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   padding-bottom: 0.5rem;
   width: 100%;
 }
 .news li:last-child {
   border-bottom: none;
 }
+.news li article {
+  position: relative;
+  display: flex;
+  min-height: 200px;
+}
+.news li .date {
+  font-family: Calibri, Arial, serif;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+.news li .post-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  border-radius: 0.1rem;
+  box-shadow: inset 0 0 0 0px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.news li .body {
+  background: white;
+  box-shadow: inset 0 0 0 0px rgba(255, 255, 255, 0.6), -10px 13px 14px -8px rgba(0, 0, 0, 0.3);
+  max-height: 180px;
+  margin: 10px 0 10px 150px;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 0.4rem;
+}
 .news li h3 {
   color: rgba(0, 0, 0, 0.8);
   text-transform: none;
-  line-height: 1.6rem;
+  line-height: 1.3rem;
+  font-size: 1rem;
+  margin-top: 0.2rem;
 }
 .news li p {
   font-family: Calibri, Arial, serif;

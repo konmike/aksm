@@ -67,18 +67,18 @@
     margin-bottom: 2rem;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
-    header {
-      margin-right: 2rem;
-      h2 {
-        text-transform: uppercase;
-        color: #00324a;
-      }
+    h1 {
+      color: #00324a;
+      margin: 2rem 0;
+      text-transform: uppercase;
     }
 
     .news {
       margin-top: 0;
-      width: 50%;
+      width: 80%;
     }
 
     .button--big {

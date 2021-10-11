@@ -32,7 +32,7 @@
     <div class="article article--news">
 
     <header>
-        <h2>Aktuality</h2>
+        <h1>Aktuality</h1>
     </header>
     <ul class="news">
         
@@ -41,17 +41,29 @@
             <li>
                 <article>
 
-                <h3>
-                    <?php the_title() ?>
-                </h3>
+                <?php if ( has_post_thumbnail() ) : ?>
+                    <div class="post-image" style="background-image: url(<?php the_post_thumbnail_url('card-cover') ?>);">
+                    </div>
+                <?php else : ?>
+                    <div class="post-image" style="background-image: url(https://aksm.cz/wp-content/uploads/2021/10/universal-post.jpg)">
+                    </div>
+                <?php endif; ?>
 
-                <span class="date">
-                    <?php echo get_the_date() ?>
-                </span>
+                <!-- <div class="tip" style="background-image: url(<?php the_post_thumbnail_url('card-cover') ?>);">
+                </div> -->
 
-                <?php the_content() ?>
-                <a class="button button--light" href="<?php the_permalink(); ?>">Více</a>
+                <div class="body">
+                    <span class="date">
+                        <?php echo get_the_date() ?>
+                    </span>
 
+                    <h3>
+                        <?php the_title() ?>
+                    </h3>
+
+                    <?php the_content() ?>
+                    
+                </div>
                 </article>
             </li>    
             <?php

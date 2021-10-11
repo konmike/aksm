@@ -8,11 +8,49 @@ add_action(
 );
 
 //Remove dots from excerpt
-function trim_excerpt($text)
-{
-	return rtrim($text,'[...]');
-}
-add_filter('get_the_excerpt', 'trim_excerpt');
+// function trim_excerpt($text)
+// {
+// 	return rtrim($text,'[...]');
+// }
+// add_filter('get_the_excerpt', 'trim_excerpt');
+
+/**
+ * Filter the except length to 20 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+// function wpdocs_custom_excerpt_length( $length ) {
+//     return 120;
+// }
+// add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+
+function new_wp_trim_excerpt($text) {
+  $raw_excerpt = $text;
+  if ( '' == $text ) {
+    $text = get_the_content('');
+    $text = strip_shortcodes( $text );
+    $text = apply_filters('the_content', $text);
+    $text = str_replace(']]>', ']]>', $text);
+    $text = strip_tags($text, '<a>');
+    $excerpt_length = apply_filters('excerpt_length', 20);
+    $excerpt_more = apply_filters('excerpt_more', ' ' . '[...]');
+    $words = preg_split('/(<a.*?a>)|\n|\r|\t|\s/', $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY|PREG_SPLIT_DELIM_CAPTURE );
+    if ( count($words) > $excerpt_length ) {
+      array_pop($words);
+      $text = implode(' ', $words);
+      $text = $text . $excerpt_more;
+      } 
+    else {
+      $text = implode(' ', $words);
+      }
+    }
+  return apply_filters('new_wp_trim_excerpt', $text, $raw_excerpt);
+  }
+remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+add_filter('get_the_excerpt', 'new_wp_trim_excerpt');
+
 
 function themeslug_enqueue_script() {
 	wp_enqueue_script('my-custom-script', get_template_directory_uri() .'/js/script.js', array('jquery'), null, true);

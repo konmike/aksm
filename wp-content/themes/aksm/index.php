@@ -31,9 +31,9 @@
 
     <div id="news" class="article article--news">
 
-    <header>
-        <h2>Aktuality</h2>
-    </header>
+    
+    <h1>Aktuality</h1>
+    
     <ul class="news">
         
             <?php $the_query = new WP_Query( array('cat' => '10', 'posts_per_page' => 3) );
@@ -41,19 +41,32 @@
             <li>
                 <article>
 
-                <h3>
-                    <?php the_title() ?>
-                </h3>
+                <?php if ( has_post_thumbnail() ) : ?>
+                    <div class="post-image" style="background-image: url(<?php the_post_thumbnail_url('card-cover') ?>);">
+                    </div>
+                <?php else : ?>
+                    <div class="post-image" style="background-image: url(https://aksm.cz/wp-content/uploads/2021/10/universal-post.jpg)">
+                    </div>
+                <?php endif; ?>
 
-                <span class="date">
-                    <?php echo get_the_date() ?>
-                </span>
+                <div class="body">
 
-                <?php the_content() ?>
-                <a class="button button--light" href="<?php the_permalink(); ?>">Více</a>
+                    <span class="date">
+                        <?php echo get_the_date() ?>
+                    </span>
+
+                    <h3>
+                        <?php the_title() ?>
+                    </h3>
+
+                    <?php the_excerpt(  ) ?>
+                
+                </div>
+
+                <!-- <a class="button button--light" href="<?php the_permalink(); ?>">Více</a> -->
 
                 </article>
-            </li>    
+            </li>
             <?php
 
             endwhile;                 
