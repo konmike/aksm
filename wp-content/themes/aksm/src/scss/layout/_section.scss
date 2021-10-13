@@ -1,8 +1,50 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .section {
+  $this: &;
+
   &--introduction {
-    margin: 2rem 3rem 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("/wp-content/uploads/2020/04/csm-2017zapad.jpg");
+    background-color: #191919;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+
+    header {
+      text-align: center;
+      @include mq(tablet) {
+        padding: 0 0.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+        padding-top: 1rem;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        text-align: center;
+      }
+    }
+
+    #{$this}__content {
+      margin: 2rem 3rem 1rem 3rem;
+
+      h3 {
+        border-bottom: 5px solid #ffd300;
+        width: min-content;
+      }
+    }
   }
 
   &--support {

@@ -24,43 +24,6 @@
     }
   }
 
-  &--introduction {
-    //height: calc(~"100vh - " 50px);
-    height: auto;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("/wp-content/uploads/2020/04/csm-2017zapad.jpg");
-    background-color: #191919;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 3.125rem;
-
-    header {
-      @include mq(tablet) {
-        padding: 0 0.5rem;
-      }
-    }
-
-    h1 {
-      padding-top: 1rem;
-      text-transform: uppercase;
-      text-align: center;
-    }
-
-    h2 {
-      text-align: center;
-    }
-
-    h3 {
-      border-bottom: 5px solid #ffd300;
-      width: min-content;
-    }
-  }
-
   &--news {
     max-width: 960px;
     margin: 0 auto;

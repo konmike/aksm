@@ -40,28 +40,7 @@ ul {
 .link--logo {
   margin-left: 1rem;
 }
-//---------------------------------
-// Odkaz na vsechny akce - uvodni strana
-.link--button-all-projects {
-  box-sizing: border-box;
-  border-radius: 0.2rem;
-  font-size: 1.5rem;
-  font-weight: bold;
-  font-family: Calibri, Arial, serif;
-  padding: 0.5rem;
-  margin: 1rem auto 2rem auto;
-  cursor: pointer;
-  transition: all 0.3s;
-  text-transform: uppercase;
-  background: transparent;
-  color: #00324a;
-  border: 0.1rem solid #ffd700;
-  text-align: center;
 
-  &:hover {
-    background: #ffd700;
-  }
-}
 //------------------------------------
 //sipka na uvodni strane
 a > .fas:hover {

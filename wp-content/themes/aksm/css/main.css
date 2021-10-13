@@ -42,26 +42,6 @@ ul {
   margin-left: 1rem;
 }
 
-.link--button-all-projects {
-  box-sizing: border-box;
-  border-radius: 0.2rem;
-  font-size: 1.5rem;
-  font-weight: bold;
-  font-family: Calibri, Arial, serif;
-  padding: 0.5rem;
-  margin: 1rem auto 2rem auto;
-  cursor: pointer;
-  transition: all 0.3s;
-  text-transform: uppercase;
-  background: transparent;
-  color: #00324a;
-  border: 0.1rem solid #ffd700;
-  text-align: center;
-}
-.link--button-all-projects:hover {
-  background: #ffd700;
-}
-
 a > .fas:hover {
   color: white;
   transition: 0.5s all;
@@ -397,7 +377,41 @@ a[href^="tel:"]:after {
 }
 
 .section--introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/wp-content/uploads/2020/04/csm-2017zapad.jpg");
+  background-color: #191919;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+}
+.section--introduction header {
+  text-align: center;
+}
+@media only screen and (max-width: 68.125em) {
+  .section--introduction header {
+    padding: 0 0.5rem;
+  }
+}
+.section--introduction header h1 {
+  font-size: 2rem;
+  padding-top: 1rem;
+  text-transform: uppercase;
+}
+.section--introduction header h2 {
+  text-align: center;
+}
+.section--introduction .section__content {
   margin: 2rem 3rem 1rem 3rem;
+}
+.section--introduction .section__content h3 {
+  border-bottom: 5px solid #ffd300;
+  width: min-content;
 }
 .section--support {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/wp-content/uploads/2020/04/support_orez-scaled.jpg");
@@ -754,36 +768,6 @@ a[href^="tel:"]:after {
   .article .illustration-image {
     display: none;
   }
-}
-.article--introduction {
-  height: auto;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/wp-content/uploads/2020/04/csm-2017zapad.jpg");
-  background-color: #191919;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 3.125rem;
-}
-@media only screen and (max-width: 68.125em) {
-  .article--introduction header {
-    padding: 0 0.5rem;
-  }
-}
-.article--introduction h1 {
-  padding-top: 1rem;
-  text-transform: uppercase;
-  text-align: center;
-}
-.article--introduction h2 {
-  text-align: center;
-}
-.article--introduction h3 {
-  border-bottom: 5px solid #ffd300;
-  width: min-content;
 }
 .article--news {
   max-width: 960px;

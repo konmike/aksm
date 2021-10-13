@@ -1,12 +1,12 @@
 <?php get_header(); ?>
-<main class="home_page">
+<main class="site__content">
     <?php
         $introducePost = get_post(24);
         $title = $introducePost->post_title;
         $content = $introducePost->post_content;
         $image = get_the_post_thumbnail_url(24,'full');
     ?>
-    <div class="article article--introduction" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(<?php echo $image ?>)">
+    <section class="section section--introduction" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(<?php echo $image ?>)">
         <header>
             <h1>Asociace křesťanských spolků mládeže, z. s.</h1>
             <h2>
@@ -15,19 +15,21 @@
             </h2>
         </header>
 
-        <section class="section section--introduction">
+        <div class="section__content">
             <h3>
                 <?=$title?>
             </h3>
             <?=$content?>
-        </section>
+
+            <a href="/?page_id=8" class="link link--more-info">Více</a>
+        </div>
 
         <a href="#news" class="smooth-scroll link--double-down">
             <i class="fas fa-angle-double-down"></i>
         </a>
 
         <div class="divider divider--bottom-intro"></div>
-    </div>
+    </section>
 
     <div id="news" class="article article--news">
 
@@ -75,7 +77,7 @@
 
     </div>
 
-    <div class="article article--projects article--projects">
+    <div class="article article--projects">
 
 
     

@@ -63,9 +63,6 @@
   $(".item-hover-88 .info").append(
     '<span class="prepare-fake">Připravujeme</span>'
   );
-  $(".section--introduction").append(
-    '<a href="/?page_id=8" class="link link--more-info">Více</a>'
-  );
 
   $(document).on("click", 'a[href^="#"].smooth-scroll', function (event) {
     event.preventDefault();
