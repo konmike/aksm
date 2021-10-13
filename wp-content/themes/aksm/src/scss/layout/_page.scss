@@ -72,8 +72,6 @@
     header {
       margin-right: 2rem;
       position: relative;
-      // width: 25%;
-      // background-color: rgb(255 222 83 / 50%);
       display: flex;
       justify-content: center;
       @include mq(tablet) {
@@ -89,7 +87,7 @@
       }
     }
 
-    .news {
+    .post-feed {
       width: 80%;
       // margin-top: 2rem;
     }

@@ -34,36 +34,34 @@
     
     <h1>Aktuality</h1>
     
-    <ul class="news">
+    <ul class="post-feed">
         
             <?php $the_query = new WP_Query( array('cat' => '10', 'posts_per_page' => 3) );
                                 if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-            <li>
-                <article>
+            <li class="item">
+                <article class="post post--excerpt">
 
-                <?php if ( has_post_thumbnail() ) : ?>
-                    <div class="post-image" style="background-image: url(<?php the_post_thumbnail_url('card-cover') ?>);">
+                    <?php if ( has_post_thumbnail() ) : ?>
+                        <div class="post__image" style="background-image: url(<?php the_post_thumbnail_url('card-cover') ?>);">
+                        </div>
+                    <?php else : ?>
+                        <div class="post__image" style="background-image: url(https://aksm.cz/wp-content/uploads/2021/10/universal-post.jpg)">
+                        </div>
+                    <?php endif; ?>
+
+                    <div class="post__container">
+                        <a class="link" href="<?php the_permalink(); ?>">
+                            <header class="post__header">
+                                <span class="date"><?php the_date(); ?></span>
+                                <h3 class="title">                
+                                    <?php the_title() ?>
+                                </h3>
+                            </header>
+                        </a>
+                        <div class="post__content">
+                            <?php the_excerpt(); ?>
+                        </div>
                     </div>
-                <?php else : ?>
-                    <div class="post-image" style="background-image: url(https://aksm.cz/wp-content/uploads/2021/10/universal-post.jpg)">
-                    </div>
-                <?php endif; ?>
-
-                <div class="body">
-
-                    <span class="date">
-                        <?php echo get_the_date() ?>
-                    </span>
-
-                    <h3>
-                        <a class="link" href="<?php the_permalink(); ?>"><?php the_title() ?></a>
-                    </h3>
-
-                    <?php the_excerpt(  ) ?>
-                
-                </div>
-
-                <!-- <a class="button button--light" href="<?php the_permalink(); ?>">Více</a> -->
 
                 </article>
             </li>
