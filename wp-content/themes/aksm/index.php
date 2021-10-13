@@ -31,7 +31,7 @@
         <div class="divider divider--bottom-intro"></div>
     </section>
 
-    <div id="news" class="article article--news">
+    <div id="news" class="section section--news">
 
     
     <h1>Aktuality</h1>

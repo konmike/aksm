@@ -24,33 +24,6 @@
     }
   }
 
-  &--news {
-    max-width: 960px;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-
-    h1 {
-      color: #00324a;
-      margin: 2rem 0;
-      text-transform: uppercase;
-    }
-
-    .post-feed {
-      margin-top: 0;
-      width: 80%;
-    }
-
-    .button--big {
-      display: block;
-      width: fit-content;
-      margin: 1rem auto 0 auto;
-    }
-  }
-
   &--projects {
     display: flex;
     flex-direction: row;
