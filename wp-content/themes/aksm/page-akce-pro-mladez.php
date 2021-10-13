@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main>
+<main class="site__content">
     <div id="content" class="page page--projects">
 <!--		--><?php //the_breadcrumb(); ?>
         <h1>Akce pro mládež</h1>

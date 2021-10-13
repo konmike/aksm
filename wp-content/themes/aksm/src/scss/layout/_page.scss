@@ -2,7 +2,7 @@
 
 .page {
   margin: 0 auto;
-  padding-top: 50px;
+  // padding-top: 50px;
 
   h1,
   h2,
@@ -61,7 +61,7 @@
     align-items: center;
     justify-content: center;
     width: 960px;
-    min-height: calc(100vh - 102px);
+    // min-height: calc(100vh - 102px);
 
     @include mq(tablet) {
       flex-direction: column;
@@ -112,7 +112,7 @@
     justify-content: flex-start;
     font-family: Calibri, Arial, serif;
     width: 960px;
-    min-height: calc(100vh - 102px);
+    // min-height: calc(100vh - 102px);
 
     @include mq(tablet) {
       width: 100%;

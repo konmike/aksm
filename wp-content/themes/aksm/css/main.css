@@ -209,9 +209,13 @@ a[href^="tel:"]:after {
   font-weight: bold;
 }
 
+.site__content {
+  margin-top: 51px;
+  min-height: calc(100vh - 102px);
+}
+
 .page {
   margin: 0 auto;
-  padding-top: 50px;
 }
 .page h1,
 .page h2,
@@ -265,7 +269,6 @@ a[href^="tel:"]:after {
   align-items: center;
   justify-content: center;
   width: 960px;
-  min-height: calc(100vh - 102px);
 }
 @media only screen and (max-width: 68.125em) {
   .page--category {
@@ -305,7 +308,6 @@ a[href^="tel:"]:after {
   justify-content: flex-start;
   font-family: Calibri, Arial, serif;
   width: 960px;
-  min-height: calc(100vh - 102px);
 }
 @media only screen and (max-width: 68.125em) {
   .page--post-detail {
@@ -1019,6 +1021,8 @@ a[href^="tel:"]:after {
   display: flex;
   text-transform: uppercase;
   color: #ff7b00;
+  max-width: 960px;
+  margin: 0 auto;
   padding: 2rem 2rem 1rem 0;
   font-size: 0.8rem;
   font-weight: bold;
@@ -1243,6 +1247,44 @@ a[href^="tel:"]:after {
   padding-right: 0.5rem;
   font-size: 2rem;
   transition: color 250ms;
+}
+
+.post--detail {
+  position: relative;
+  max-width: 960px;
+  margin: 2rem auto 0 auto;
+}
+.post--detail .post__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: rgba(0, 0, 0, 0.05);
+  width: 250px;
+  height: 250px;
+  border-radius: 0.1rem;
+  box-shadow: inset 0 0 0 0px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.post--detail .post__header {
+  margin-left: 250px;
+  padding-left: 1rem;
+}
+.post--detail .post__header .date {
+  font-family: Calibri, Arial, serif;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+.post--detail .post__header .title {
+  color: #004465;
+  line-height: 1.6rem;
+  margin-top: 0.3rem;
+}
+.post--detail .post__content {
+  margin-left: 250px;
+  padding-left: 1rem;
+  font-family: Calibri, Arial, serif;
 }
 
 .divider {
@@ -1586,6 +1628,12 @@ a[href^="tel:"]:after {
   display: flex;
   min-height: 200px;
 }
+.news li:hover article .post-image {
+  transform: scale(1.04);
+}
+.news li:hover article .body {
+  box-shadow: inset 0 0 0 0px rgba(255, 255, 255, 0.6), 10px 3px 10px -4px rgba(0, 0, 0, 0.3);
+}
 .news li .date {
   font-family: Calibri, Arial, serif;
   font-size: 0.8rem;
@@ -1599,10 +1647,12 @@ a[href^="tel:"]:after {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-color: rgba(0, 0, 0, 0.2);
   width: 200px;
   height: 200px;
   border-radius: 0.1rem;
   box-shadow: inset 0 0 0 0px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);
+  transition: all 300ms;
 }
 .news li .body {
   background: white;
@@ -1612,6 +1662,10 @@ a[href^="tel:"]:after {
   padding: 1rem;
   box-sizing: border-box;
   border-radius: 0.4rem;
+  transition: all 300ms;
+}
+.news li .body .link {
+  color: rgba(0, 0, 0, 0.8);
 }
 .news li h3 {
   color: rgba(0, 0, 0, 0.8);

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main>
+<main class="site__content">
     <div id="content" class="page page--category">
         
         <h1><?php single_cat_title('' , true); ?></h1>
@@ -25,7 +25,7 @@
                     </span>
 
                     <h3>
-                        <?php the_title() ?>
+                        <a class="link" href="<?php the_permalink(); ?>"><?php the_title() ?></a>
                     </h3>
 
                     <?php the_excerpt() ?>

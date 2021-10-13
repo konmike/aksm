@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main>
+<main class="site__content">
     <div id="content" class="page page--forms">
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			

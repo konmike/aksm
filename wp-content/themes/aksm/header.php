@@ -26,7 +26,7 @@
 
 	</head>
 
-<body id="main">
+<body id="main" class="site">
 
 <a href="#main" class="smooth-scroll">
 	<span class="button button-scroll-top button-hide"></span>

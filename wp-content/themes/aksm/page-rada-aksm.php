@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main>
+<main class="site__content">
 <div class="page page--board">
     <h1>Rada AKSM</h1>
 

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main>
+<main class="site__content">
     <div id="content" class="page page--contact">
         <h1>Kontakt</h1>
     </div>
