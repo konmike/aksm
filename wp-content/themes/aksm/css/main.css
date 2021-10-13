@@ -437,6 +437,35 @@ a[href^="tel:"]:after {
   width: fit-content;
   margin: 1rem auto 0 auto;
 }
+.section--events {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5rem;
+  position: relative;
+}
+@media only screen and (max-width: 68.125em) {
+  .section--events {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.section--events::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -25%;
+  width: 150%;
+  height: 30px;
+  transform: rotate(-3deg);
+  transform-origin: 3% 0;
+  margin-top: 3rem;
+  background: linear-gradient(45deg, white 20%, #fffebd 100%);
+}
+.section--events .button--big {
+  margin: 1rem auto 2rem auto;
+}
 .section--support {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/wp-content/uploads/2020/04/support_orez-scaled.jpg");
   background-position: bottom;
@@ -791,46 +820,6 @@ a[href^="tel:"]:after {
 @media only screen and (max-width: 52.813em) {
   .article .illustration-image {
     display: none;
-  }
-}
-.article--projects {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 0;
-}
-@media only screen and (max-width: 68.125em) {
-  .article--projects {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-.article--projects::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: -25%;
-  width: 150%;
-  height: 30px;
-  transform: rotate(-3deg);
-  transform-origin: 3% 0;
-  margin: 3rem 0;
-  background: linear-gradient(45deg, white 20%, #fffebd 100%);
-}
-.article--projects .button--big {
-  margin: 1rem auto 2rem auto;
-}
-.article--projects .projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  padding: 6rem 0 0 0;
-}
-@media only screen and (max-width: 68.125em) {
-  .article--projects .projects {
-    align-items: center;
   }
 }
 .article--creation {

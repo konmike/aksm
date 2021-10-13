@@ -75,6 +75,41 @@
     }
   }
 
+  &--events {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5rem;
+    position: relative;
+
+    @include mq(tablet) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: -25%;
+      width: 150%;
+      height: 30px;
+      transform: rotate(-3deg);
+      transform-origin: 3% 0;
+      margin-top: 3rem;
+      background: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 1) 20%,
+        rgba(255, 254, 189, 1) 100%
+      );
+    }
+
+    .button--big {
+      margin: 1rem auto 2rem auto;
+    }
+  }
+
   &--support {
     //background: rgba(0,0,0,.8);
 
