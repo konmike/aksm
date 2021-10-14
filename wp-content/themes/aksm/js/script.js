@@ -58,12 +58,6 @@
     });
   });
 
-  $(".item-hover-44 .info").append('<span class="more-info-fake">Více</span>');
-  $(".item-hover-159 .info").append('<span class="more-info-fake">Více</span>');
-  $(".item-hover-88 .info").append(
-    '<span class="prepare-fake">Připravujeme</span>'
-  );
-
   $(window).scroll(function () {
     var scrollTop = $(window).scrollTop();
     if (scrollTop > 100) {
