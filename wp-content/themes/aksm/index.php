@@ -21,10 +21,10 @@
             </h3>
             <?=$content?>
 
-            <a href="/?page_id=8" class="link link--more-info">Více</a>
+            <a href="/?page_id=8" class="button button--corner button--big">Jak fungujeme?</a>
         </div>
 
-        <a href="#news" class="smooth-scroll link--double-down">
+        <a href="#news">
             <i class="fas fa-angle-double-down"></i>
         </a>
 

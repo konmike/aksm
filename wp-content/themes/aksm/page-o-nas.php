@@ -16,7 +16,7 @@
             <h2>Vznik</h2>
             <?=$content?>
 
-            <a href="#focus" class="smooth-scroll link--next-article">
+            <a href="#focus" class="link--next-article">
                 Jaké je naše zaměření?
             </a>
         </div>
@@ -43,7 +43,7 @@
             <h2>Zaměření</h2>
 	        <?=$content?>
 
-            <a href="#activity" class="smooth-scroll link--next-article">
+            <a href="#activity" class="link--next-article">
                 Jaký je charakter činnosti naší asociace?
             </a>
         </div>

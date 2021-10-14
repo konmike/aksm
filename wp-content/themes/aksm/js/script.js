@@ -64,34 +64,16 @@
     '<span class="prepare-fake">Připravujeme</span>'
   );
 
-  $(document).on("click", 'a[href^="#"].smooth-scroll', function (event) {
-    event.preventDefault();
-    let menu = $("#menu");
-
-    $("html, body").animate(
-      {
-        scrollTop: $($.attr(this, "href")).offset().top - menu.height(),
-      },
-      1000
-    );
-  });
-
-  /*if($('main').hasClass("home_page")){
-        $('div.contact').addClass("contact--light");
-    }else{
-        $('div.contact').addClass("contact--dark");
-    }*/
-
   $(window).scroll(function () {
     var scrollTop = $(window).scrollTop();
     if (scrollTop > 100) {
-      $("span.button-scroll-top").addClass("button-visible");
-      $("span.button-scroll-top").removeClass("button-hide");
-      $("span.button-scroll-top").css("display", "inline-block");
+      $(".button--scroll-top").addClass("button--visible");
+      $(".button--scroll-top").removeClass("button--hide");
+      $(".button--scroll-top").css("display", "inline-block");
     } else {
-      $("span.button-scroll-top").removeClass("button-visible");
-      $("span.button-scroll-top").addClass("button-hide");
-      $("span.button-scroll-top").css("display", "none");
+      $(".button--scroll-top").removeClass("button--visible");
+      $(".button--scroll-top").addClass("button--hide");
+      $(".button--scroll-top").css("display", "none");
     }
   });
 

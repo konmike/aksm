@@ -1,12 +1,12 @@
 <?php get_header(); ?>
-<main class="home_page">
+<main class="site__content">
     <?php
         $introducePost = get_post(24);
         $title = $introducePost->post_title;
         $content = $introducePost->post_content;
         $image = get_the_post_thumbnail_url(24,'full');
     ?>
-    <div class="article article--introduction" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(<?php echo $image ?>)">
+    <section class="section section--introduction" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(<?php echo $image ?>)">
         <header>
             <h1>Asociace křesťanských spolků mládeže, z. s.</h1>
             <h2>
@@ -15,128 +15,122 @@
             </h2>
         </header>
 
-        <section class="section section--introduction">
+        <div class="section__content">
             <h3>
                 <?=$title?>
             </h3>
             <?=$content?>
-        </section>
 
-        <a href="#projects" class="smooth-scroll link--double-down">
+            <a href="/?page_id=8" class="button button--corner button--big">Jak fungujeme?</a>
+        </div>
+
+        <a href="#news">
             <i class="fas fa-angle-double-down"></i>
         </a>
 
         <div class="divider divider--bottom-intro"></div>
-    </div>
+    </section>
 
-    <div class="article article--news">
+    <div id="news" class="section section--news">
 
-    <header>
-        <h1>Aktuality</h1>
-    </header>
-    <ul class="news">
+    
+    <h1>Aktuality</h1>
+    
+    <ul class="post-feed">
         
             <?php $the_query = new WP_Query( array('cat' => '10', 'posts_per_page' => 3) );
                                 if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-            <li>
-                <article>
+            <li class="item">
+                <article class="post post--excerpt">
 
-                <?php if ( has_post_thumbnail() ) : ?>
-                    <div class="post-image" style="background-image: url(<?php the_post_thumbnail_url('card-cover') ?>);">
+                    <?php if ( has_post_thumbnail() ) : ?>
+                        <div class="post__image" style="background-image: url(<?php the_post_thumbnail_url('card-cover') ?>);">
+                        </div>
+                    <?php else : ?>
+                        <div class="post__image" style="background-image: url(https://aksm.cz/wp-content/uploads/2021/10/universal-post.jpg)">
+                        </div>
+                    <?php endif; ?>
+
+                    <div class="post__container">
+                        <a class="link" href="<?php the_permalink(); ?>">
+                            <header class="post__header">
+                                <span class="date"><?php the_date(); ?></span>
+                                <h3 class="title">                
+                                    <?php the_title() ?>
+                                </h3>
+                            </header>
+                        </a>
+                        <div class="post__content">
+                            <?php the_excerpt(); ?>
+                        </div>
                     </div>
-                <?php else : ?>
-                    <div class="post-image" style="background-image: url(https://aksm.cz/wp-content/uploads/2021/10/universal-post.jpg)">
-                    </div>
-                <?php endif; ?>
 
-                <!-- <div class="tip" style="background-image: url(<?php the_post_thumbnail_url('card-cover') ?>);">
-                </div> -->
-
-                <div class="body">
-                    <span class="date">
-                        <?php echo get_the_date() ?>
-                    </span>
-
-                    <h3>
-                        <?php the_title() ?>
-                    </h3>
-
-                    <?php the_content() ?>
-                    
-                </div>
                 </article>
-            </li>    
+            </li>
             <?php
 
             endwhile;                 
             endif; ?>
 
-            <a href="https://aksm.cz/category/aktuality" class="link--button-all-projects">Všechny aktuality</a>
+            <a href="https://aksm.cz/category/aktuality" class="button button--light button--big">Všechny aktuality</a>
         </ul>
 
     </div>
 
-    <div id="projects" class="article article--projects article--projects article--bef">
-
-    
-        <div class="projects">
-
+    <div class="section section--events">
         
-            <?php $the_query = new WP_Query( array('cat' => '4') );
-                  if ( $the_query->have_posts() ) { ?> 
-                
-                <div class="grid">
-
-            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-
-                    <div class="card preparing" style="background-image: url(<?php the_post_thumbnail_url('card-cover') ?>);">
-                        <div class="cover">
-                            <h2><?php the_title() ?></h2>
-                            <button class="more-information">Podrobnosti</button>
-                        </div>
-                        <div class="content hidden">
-                            <button class="hide-information">Skrýt</button>
-                            <h2><?php the_title() ?></h2>
-                            <?php the_content() ?>
-                        </div>
-                    </div>  
-            <?php endwhile; 
-            wp_reset_postdata(); ?>
-            
-                </div>
-                <?php } ?>
-
-            <?php $cats = ["6","7", "8"]; ?>
-
+        <?php $the_query = new WP_Query( array('cat' => '4') );
+            if ( $the_query->have_posts() ) { ?>     
             <div class="grid">
-            <?php foreach($cats as $cat) : ?>
 
-                <?php $the_query = new WP_Query( array('category__and' => array('5', $cat), 'posts_per_page' => 1) );
-                  if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-                    <div class="card over" style="background-image: url(<?php the_post_thumbnail_url('card-cover') ?>);">
-                        <div class="cover">
-                            <h2><?php the_title() ?></h2>
-                            <button class="more-information">Podrobnosti</button>
-                        </div>
-                        <div class="content hidden">
-                            <button class="hide-information">Skrýt</button>
-                            <h2><?php the_title() ?></h2>
-                            <?php the_content() ?>
-                        </div>
-                    </div>  
-            <?php endwhile; 
-                wp_reset_postdata(); 
-                endif;
-                endforeach;
-            ?>
-            
-                </div>
+                <div class="card preparing" style="background-image: url(<?php the_post_thumbnail_url('card-cover') ?>);">
+                    <div class="cover">
+                        <h2><?php the_title() ?></h2>
+                        <button class="more-information">Podrobnosti</button>
+                    </div>
+                    <div class="content hidden">
+                        <button class="hide-information">Skrýt</button>
+                        <?php the_content() ?>
+                    </div>
+                </div>  
+                <?php endwhile; 
+                wp_reset_postdata(); ?>
+        
+            </div>
+            <?php } ?>
 
-        <a href="/?page_id=10" class="link--button-all-projects">
+        <?php $cats = ["6","7", "8"]; ?>
+
+        <div class="grid">
+        <?php foreach($cats as $cat) : ?>
+
+            <?php $the_query = new WP_Query( array('category__and' => array('5', $cat), 'posts_per_page' => 1) );
+                if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+                <div class="card over" style="background-image: url(<?php the_post_thumbnail_url('card-cover') ?>);">
+                    <div class="cover">
+                        <h2><?php the_title() ?></h2>
+                        <button class="more-information">Podrobnosti</button>
+                    </div>
+                    <div class="content hidden">
+                        <button class="hide-information">Skrýt</button>
+                        <?php the_content() ?>
+                    </div>
+                </div>  
+        <?php endwhile; 
+            wp_reset_postdata(); 
+            endif;
+            endforeach;
+        ?>
+        
+        </div>
+
+        <a href="/?page_id=10" class="button button--light button--big">
             Všechny akce pro mládež
         </a>
-        </div>
+            
     </div>
 
     <div class="section section--support">

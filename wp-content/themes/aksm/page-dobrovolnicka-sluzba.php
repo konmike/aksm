@@ -18,7 +18,7 @@
 			<h2><?=$title?></h2>
 			<?=$content?>
 
-			<a href="#prepare" class="smooth-scroll link--next-article">
+			<a href="#prepare" class="link--next-article">
 				Nechceš i Ty věnovat část svého života práci pro druhé?
 			</a>
 		</div>
@@ -56,7 +56,7 @@
 				</a>
 			</span>
 
-			<a href="#graf" class="smooth-scroll link--next-article">
+			<a href="#graf" class="link--next-article">
 				Podívej se, jak se naše služba vyvíjí v čase.
 			</a>
 		</div>

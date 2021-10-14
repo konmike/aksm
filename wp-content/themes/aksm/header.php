@@ -28,8 +28,8 @@
 
 <body id="main" class="site">
 
-<a href="#main" class="smooth-scroll">
-	<span class="button button-scroll-top button-hide"></span>
+<a href="#main">
+	<span class="button button--scroll-top button--hide"></span>
 </a>
 
 <header class="header header--search-and-nav">
